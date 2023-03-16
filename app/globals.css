@@ -1,5 +1,23 @@
 :root {
-  --max-width: 1100px;
+  --c-prime-light: #000;
+  --c-prime-dark: #fff;
+
+  --c-ang-dark: #a89d55;
+  --c-ang-light: #cbc497;
+  --c-bar-dark: #721904;
+  --c-bar-light: #8b341f;
+  --c-jord-dark: #985a1c;
+  --c-jord-light: #b87f45;
+  --c-sand-dark: #c1a016;
+  --c-sand-light: #d3b73d;
+  --c-skog-dark: #7b932e;
+  --c-skog-light: #9eb45a;
+  --c-vik-dark: #455b81;
+  --c-vik-light: #657b9f;
+  
+  
+}
+  /* --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
@@ -38,8 +56,8 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
-}
-
+} */
+/* 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -104,4 +122,4 @@ a {
   html {
     color-scheme: dark;
   }
-}
+} */
