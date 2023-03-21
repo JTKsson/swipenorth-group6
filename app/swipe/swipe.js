@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Swipeable } from "react-swipeable";
-import App from "./array.js"
+import MyComponent from "./array.js"
 
-const data = App;
+const data = MyComponent;
 
 const SwipableCarousel = ({data}) => {
 

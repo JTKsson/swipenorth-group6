@@ -8,7 +8,11 @@ const MyComponent = () => {
     { title: "Third slide", description: "This is the third slide" },
   ];
 
-  return <SwipableCarousel data={data} />;
+  return (
+    <div>
+  <SwipableCarousel data={data} />
+  </div>
+  )
 };
 
 export default MyComponent;
