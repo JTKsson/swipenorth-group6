@@ -100,6 +100,54 @@ a {
   text-decoration: none;
 }
 
+/***************** footer  ************/
+
+.footer {
+  background-color: #f2f2f2;
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 20px;
+}
+
+.footer-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin: 0 20px;
+  color: rgb(73, 100, 73);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.menu-link {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} 
+
+.menu-fa {
+  color: red;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.menu-fa:hover {
+  opacity: 70%;
+}
+
+
+/***************** footer  ************/
+
+
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
