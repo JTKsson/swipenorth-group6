@@ -10,8 +10,8 @@ const MyComponent = () => {
 
   return (
     <div>
-  <SwipableCarousel data={data} />
-  </div>
+      <SwipableCarousel data={data} />
+    </div>
   )
 };
 

@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import { Swipeable } from "react-swipeable";
-import MyComponent from "./array.js"
 
-const data = MyComponent;
-
-const SwipableCarousel = ({data}) => {
-
+const SwipableCarousel = ({ data }) => {
+  
   let [index, setIndex] = React.useState(0);
 
   const handleSwipedLeft = () => {
@@ -33,22 +30,6 @@ const SwipableCarousel = ({data}) => {
 };
 
 export default SwipableCarousel;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
