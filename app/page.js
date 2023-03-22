@@ -1,13 +1,15 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import styles from './page.module.css'
+// import styles from './page.module.css'
+import JobBox from './components/jobBox/page'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main className="main">
     <h1>Git funkar jao</h1>
+    <JobBox />
     </main>
   )
 }

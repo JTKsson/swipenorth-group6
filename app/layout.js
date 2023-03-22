@@ -1,5 +1,7 @@
 import './globals.css'
 import Footer from './components/footerMenu/page'
+import Header from './components/header/page'
+
 
 export const metadata = {
   title: 'Create Next App',
@@ -8,7 +10,8 @@ export const metadata = {
 
 const Layout =({ children }) => {
   return (
-    <div>
+    <div className='content'>
+      <Header />
       {children}
       <Footer />
     </div>
