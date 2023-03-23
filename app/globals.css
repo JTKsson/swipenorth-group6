@@ -132,6 +132,10 @@ a {
   --c-vik-light: #657b9f;
 }
 
+h3 {
+  font-size: 1rem;
+  font-weight: 700;
+}
 h4 {
   text-transform: uppercase;
   font-size: 0.813rem;
@@ -189,10 +193,10 @@ a {
   text-decoration: none;
 }
 
-button,
+
 button:hover,
 button {
-  text-decoration: none;
+ 
   outline-color: transparent;
   background-color: transparent;
 
@@ -211,11 +215,11 @@ button {
   -ms-border-radius: 5em;
   -o-border-radius: 5em;
   text-transform: uppercase;
- 
+
 }
 
 button:hover {
-  color: #222;
+  color: #666;
   border-color: #666;
 }
 
@@ -230,8 +234,10 @@ p {
   font-weight: 400;
 }
 
-.jobDescription {
+.jobDescription,
+.jobSubSubHeading {
   font-size: 14px;
+
 }
 
 h1 {}
@@ -239,16 +245,35 @@ h1 {}
 
 .jobContainer {
   margin: auto;
-  height: 70%;
+  height: 60%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  padding: 30px;
+  border: #000 1px solid;
+  overflow: hidden;
 }
+
 
 .btnContainer {
   /* justify-self: flex-end; */
-  padding-top: 7rem;
+  padding-top: 10vh;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+
 }
+
 /***************** header ************/
 header {
   display: flex;
@@ -331,22 +356,33 @@ main {
 
 /* JobBox */
 
-.jobContainer {
-  background-color: red;
-  width: 80%;
-  border: 5px soild rgb(115, 60, 60);
-  padding: 10px;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: -0.01em;
-  padding: 30px;
-}
+
 
 .jobTitle,
 .employer {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: -0.01em;
+}
+
+
+.about {
+  line-height: 1.8;
+  padding-top: 0.5rem;
+  font-size: 20px;
+  letter-spacing: -0.01em;
+}
+.jobHeading,
+.jobSubheading {
+  text-align: center;
+}
+ .jobSubheading {
+  padding-bottom: 3rem;
+}
+
+.subSubSubHeading {
+  text-transform: uppercase;
+  font-size: 0.813rem;
 
 }
 
@@ -362,16 +398,17 @@ main {
   font-weight: 700;
 }
 
-
-
 .scope {
   line-height: 2.5;
 }
 
 .applyBy {
-  line-height: 3;
-  font-weight: 600;
+  line-height: 1.5;
+  font-weight: 400;
+  padding-top: 1rem;
+  font-size: 0.813rem;
 }
+
 .date {
   font-weight: 400;
 }
