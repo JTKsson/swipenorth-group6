@@ -17,13 +17,13 @@ const Footer = () => {
               </Link>
             </li>
             <li className='menu-item'>
-              <Link href="/" className='menu-link'>
+              <Link href="../savedJobs" className='menu-link'>
                 <FontAwesomeIcon icon={faHeart} className="menu-fa"/>
                 Sparade jobb
               </Link>
             </li>
             <li className='menu-item'>
-              <Link href="/" className='menu-link'>
+              <Link href="../yourProfile" className='menu-link'>
                 <FontAwesomeIcon icon={faUser} className="menu-fa"/>
                 Profil
               </Link>
