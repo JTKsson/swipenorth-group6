@@ -136,6 +136,7 @@ h3 {
   font-size: 1rem;
   font-weight: 700;
 }
+
 h4 {
   text-transform: uppercase;
   font-size: 0.813rem;
@@ -196,7 +197,7 @@ a {
 
 button:hover,
 button {
- 
+
   outline-color: transparent;
   background-color: transparent;
 
@@ -356,8 +357,6 @@ main {
 
 /* JobBox */
 
-
-
 .jobTitle,
 .employer {
   font-size: 20px;
@@ -372,11 +371,13 @@ main {
   font-size: 20px;
   letter-spacing: -0.01em;
 }
+
 .jobHeading,
 .jobSubheading {
   text-align: center;
 }
- .jobSubheading {
+
+.jobSubheading {
   padding-bottom: 5vh;
 }
 
@@ -415,8 +416,8 @@ main {
 
 @media only screen and (min-width: 541px) {
   body {
-    background-color: lightblue;
-    height: 960px;
+    /* background-color: lightblue; */
+    /* height: 960px; */
     aspect-ratio: 9/16;
   }
 }
