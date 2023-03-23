@@ -1,9 +1,14 @@
-header {
+.header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     padding: 10px;
-    background-color: #f2f2f2;
+    padding-top: 20px;
+    background-color: pink;
+  }
+
+  .text {
+    background-color: aqua;
   }
   
   .logo {

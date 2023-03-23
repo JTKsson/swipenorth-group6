@@ -21,7 +21,7 @@ export default function JobBox() {
           <span className="jobDescription">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s
+            ever since the 1500s <br />
             <span className="employerLink">Sök jobbet</span>
           </span>
         </p>
