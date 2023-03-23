@@ -1,5 +1,5 @@
 import React from "react";
-import SwipableCarousel from "./Swipe";
+import SwipableCarousel from "../components/SwipableCarousel";
 
 const MyComponent = () => {
   const data = [
