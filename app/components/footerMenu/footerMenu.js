@@ -1,3 +1,5 @@
+'use client'
+import { useRouter } from 'next/navigation';
 import Link from 'next/link'
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
@@ -5,32 +7,33 @@ import { faCompass } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Footer = () => {
+  const router = useRouter();
   return (
     <footer className="footer">
-      <div className="container">
+      
         <nav>
           <ul className="footer-menu">
             <li className='menu-item'>
-              <Link href="/" className='menu-link'>
-                <FontAwesomeIcon icon={faCompass} className="menu-fa"/>
+              <Link href="/" className="menu-link">
+                <FontAwesomeIcon icon={faCompass} className="menu-fa" />
                 Utforska
               </Link>
             </li>
             <li className='menu-item'>
-              <Link href="/" className='menu-link'>
+              <Link href="../savedJobs" className='menu-link'>
                 <FontAwesomeIcon icon={faHeart} className="menu-fa"/>
                 Sparade jobb
               </Link>
             </li>
             <li className='menu-item'>
-              <Link href="/" className='menu-link'>
-                <FontAwesomeIcon icon={faUser} className="menu-fa"/>
+              <Link href="../profilePage" className='menu-link'>
+                <FontAwesomeIcon icon={faUser} className="menu-fa" />
                 Profil
               </Link>
             </li>
           </ul>
         </nav>
-      </div>
+     
     </footer>
   )
 }

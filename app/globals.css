@@ -40,22 +40,36 @@ html {
   min-height: 100vh;
   max-width: 100vw;
   overflow-x: hidden;
+  background-color: #000;
 }
 
 body {
-  outline: auto;
+  /* outline: auto; */
   max-width: 550px;
   display: flex;
   flex-direction: column;
   margin: auto;
   min-height: 100vh;
-
+  background-color: white;
 }
 
 .main {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  /* padding-top: 20px; */
+}
+
+.main>p {
+  border: 1px solid salmon;
+}
+
+.pagePlaceholder {
+  margin: auto;
+  font-weight: 400;
+  color: #858585;
+  /* font-size: 1rem; */
+  text-align: center;
 }
 
 img,
@@ -81,10 +95,8 @@ a {
 
 button:hover,
 button {
-
   outline-color: transparent;
   background-color: transparent;
-
 }
 
 
@@ -152,8 +164,8 @@ h1 {}
 
 .btnContainer {
   /* justify-self: flex-end; */
-  padding-top: 10vh;
-  padding-bottom: 2rem;
+
+  padding-top: 1rem;
   display: flex;
   justify-content: space-evenly;
 
@@ -169,11 +181,11 @@ header {
   position: relative;
 }
 
-header > {
-  /* outline: auto; */
+header>* {
+  outline: auto;
 }
 
-.kommunLogoContainer{
+.kommunLogoContainer {
   /* outline: auto; */
 
 }
@@ -194,33 +206,33 @@ header > {
 
 main {
   position: relative;
-
 }
 
 
 /***************** footer ************/
 
 .footer {
-  background-color: #f2f2f2;
+  /* background-color: #f2f2f2; */
   padding: 20px 0;
   /* position: sticky;
   bottom: 0px; */
+  border-top: 1px solid black;
 }
 
 .container {
-  max-width: 500px;
-  margin: 0 30px;
+  /* max-width: 500px; */
+  /* margin: 0 30px; */
 }
 
 .footer-menu {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   list-style: none;
   margin: 0;
   padding: 0;
   margin: 0 20px;
-  color: rgb(73, 100, 73);
+  color: var(--c-bar-dark);
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -231,8 +243,16 @@ main {
   align-items: center;
 }
 
+.menu-link {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .menu-fa {
-  color: red;
+  color: var(--c-bar-light);
+  fill: var(--c-bar-light);
   width: 30px;
   height: 30px;
   align-items: center;
@@ -244,7 +264,7 @@ main {
 }
 
 
-/***************** footer  ************/
+/***************** END footer  ************/
 
 /* @media (prefers-color-scheme: dark) {
   html {
@@ -253,7 +273,7 @@ main {
 } */
 
 
-/* JobBox */
+/***************** JobBox  ************/
 
 .jobTitle,
 .employer {
@@ -261,7 +281,6 @@ main {
   line-height: 1.2;
   letter-spacing: -0.01em;
 }
-
 
 .about {
   line-height: 1.8;
@@ -318,4 +337,17 @@ main {
     /* height: 960px; */
     aspect-ratio: 9/16;
   }
+}
+
+/***************** JobsPage ************/
+
+.jobsList {
+  padding-top: 100px;
+}
+.jobCell {
+  padding: 10px;
+  border: 1px solid #000;
+  padding-left: 30px;
+  line-height: 1.8;
+
 }

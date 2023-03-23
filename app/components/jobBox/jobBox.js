@@ -6,10 +6,10 @@ export default function JobBox() {
     <>
       <div className="jobContainer">
         <p className="jobHeading">
-          <span className="jobTitle">Job title</span>
+          <span className="jobTitle">Tjänst</span>
         </p>
         <p className="jobSubheading">
-          <span className="employer">Employer</span>
+          <span className="employer">Arbetsgivare</span>
         </p>
         <p>
           <span className="subSubSubHeading">Omfattning &nbsp;</span>
@@ -20,8 +20,8 @@ export default function JobBox() {
           <p>
           <span className="jobDescription">
             Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s <br />
+            industry. Lorem Ipsum has been the industry&apos;s standard dummy text
+            ever since the 1500s.<br />
             <span className="employerLink">Sök jobbet</span>
           </span>
         </p>
