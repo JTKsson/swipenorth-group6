@@ -39,6 +39,7 @@
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135; */
 }
+
 /* 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -73,11 +74,14 @@
   }
 } */
 
+/* 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
+} */
+
+
 /* 
 html {
   max-width: 100vw;
@@ -102,21 +106,155 @@ body {
     rgb(var(--background-start-rgb)); */
 }
 
+/* 
 
+a {
+  color: inherit;
+  text-decoration: none;
+} */
+
+
+:root {
+  --c-prime-light: #000;
+  --c-prime-dark: #fff;
+
+  --c-ang-dark: #a89d55;
+  --c-ang-light: #cbc497;
+  --c-bar-dark: #721904;
+  --c-bar-light: #8b341f;
+  --c-jord-dark: #985a1c;
+  --c-jord-light: #b87f45;
+  --c-sand-dark: #c1a016;
+  --c-sand-light: #d3b73d;
+  --c-skog-dark: #7b932e;
+  --c-skog-light: #9eb45a;
+  --c-vik-dark: #455b81;
+  --c-vik-light: #657b9f;
+}
+
+h4 {
+  text-transform: uppercase;
+  font-size: 0.813rem;
+  font-weight: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+}
+
+html {
+  min-height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  outline: auto;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  min-height: 100vh;
+
+}
+
+.main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+img,
+svg,
+picture,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+textarea,
+button,
+select {
+  font: inherit;
+}
 
 a {
   color: inherit;
   text-decoration: none;
 }
 
+button,
+button:hover,
+button {
+  text-decoration: none;
+  outline-color: transparent;
+  background-color: transparent;
+
+}
+
+
+button {
+  font-size: 0.75rem;
+  color: #000;
+  background: transparent;
+  border: 0.1em solid #000;
+  border-radius: 0.2em;
+  padding: 0.2em 1em;
+  -webkit-border-radius: 5em;
+  -moz-border-radius: 5em;
+  -ms-border-radius: 5em;
+  -o-border-radius: 5em;
+  text-transform: uppercase;
+ 
+}
+
+button:hover {
+  color: #222;
+  border-color: #666;
+}
+
+button:focus-visible,
+input:focus-visible {
+  /* outline: 1px solid black; */
+}
+
+
+p {
+  /* font-family: '--f-inter'; */
+  font-weight: 400;
+}
+
+.jobDescription {
+  font-size: 14px;
+}
+
+h1 {}
+
+
+.jobContainer {
+  margin: auto;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.btnContainer {
+  /* justify-self: flex-end; */
+  padding-top: 7rem;
+}
 /***************** header ************/
 header {
   display: flex;
   justify-content: center;
   padding: 10px;
   background-color: #f2f2f2;
-  /* max-width: 500px; */
-  box-sizing: border-box;
 }
 
 .logo {
@@ -167,7 +305,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-} 
+}
 
 .menu-fa {
   color: red;
@@ -184,11 +322,11 @@ main {
 
 /***************** footer  ************/
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
-}
+} */
 
 
 /* JobBox */
@@ -196,6 +334,52 @@ main {
 .jobContainer {
   background-color: red;
   width: 80%;
-  border: 1px soild black;
+  border: 5px soild rgb(115, 60, 60);
   padding: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  padding: 30px;
+}
+
+.jobTitle,
+.employer {
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+
+}
+
+.jobTitle {
+  font-weight: 700;
+}
+
+
+.scope,
+.employerLink {
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 700;
+}
+
+
+
+.scope {
+  line-height: 2.5;
+}
+
+.applyBy {
+  line-height: 3;
+  font-weight: 600;
+}
+.date {
+  font-weight: 400;
+}
+
+@media only screen and (min-width: 541px) {
+  body {
+    background-color: lightblue;
+    height: 960px;
+    aspect-ratio: 9/16;
+  }
 }
