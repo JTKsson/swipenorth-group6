@@ -3,6 +3,11 @@ import './globals.css'
 import Footer from './components/footerMenu/page'
 import Header from './components/header/page'
 
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+})
+
 
 export const metadata = {
   title: 'Swipe North',
@@ -11,8 +16,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" className={inter.className}>
+      <body >
         <Header />
         {children}
         <Footer />
