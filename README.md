@@ -1,3 +1,25 @@
+-----------------------------------------------
+GIT-RUTIN:
+
+Create branch and first branch commit:---------
+
+$ git checkout -b BRANCHNAME [creates and change to new branch]
+[write some code]
+$ git add .
+$ git commit -m "COMMIT MESSAGE"
+$ git push --set-upstream origin BRANCHNAME 
+
+List all branches and see current:---------
+$ git branch
+
+Change branch:---------
+$ git checkout BRANCHNAME
+
+-----------------------------------------------
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
