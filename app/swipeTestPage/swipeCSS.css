@@ -1,9 +1,12 @@
+
 .swipeContainer {
     display: flex;
     align-items: center;
     justify-content: center;
     outline: auto;
     flex-grow: 1;
+    position: relative;
+    flex-direction: column;
 }
 
 .card {
@@ -15,4 +18,5 @@
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
+    margin: 20px;;
 }
