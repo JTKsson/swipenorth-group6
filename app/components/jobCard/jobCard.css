@@ -1,4 +1,36 @@
-/***************** JobCard  ************/
+.jobDescription,
+.jobSubSubHeading {
+    font-size: 14px;
+}
+
+.jobContainer {
+    margin: auto;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    padding: 30px;
+    border: #000 1px solid;
+    overflow: hidden;
+}
+
+.btnContainer {
+    /* justify-self: flex-end; */
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+
+}
 
 .jobTitle,
 .employer {
@@ -26,7 +58,6 @@
 .subSubSubHeading {
     text-transform: uppercase;
     font-size: 0.813rem;
-
 }
 
 .jobTitle {
