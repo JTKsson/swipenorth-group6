@@ -73,7 +73,8 @@ html {
 }
 
 body {
-  outline: auto;
+  /*outline: auto;
+  */
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -83,6 +84,12 @@ body {
   display: flex;
   width: 100vw;
   max-width: 390px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  -webkit-border-radius: 15px;
 }
 
 .main {
@@ -131,8 +138,6 @@ input:focus-visible {
   /* outline: 1px solid black; */
 }
 
-
-
 .jobDescription,
 .jobSubSubHeading {
   font-size: 14px;
@@ -158,7 +163,6 @@ input:focus-visible {
   border: #000 1px solid;
   overflow: hidden;
 }
-
 
 .btnContainer {
   /* justify-self: flex-end; */
@@ -215,11 +219,6 @@ main {
   border-top: 1px solid black;
 }
 
-.container {
-  /* max-width: 500px; */
-  /* margin: 0 30px; */
-}
-
 .footer-menu {
   display: flex;
   align-items: center;
@@ -259,14 +258,7 @@ main {
   opacity: 70%;
 }
 
-
 /***************** END footer  ************/
-
-/* @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-} */
 
 
 /***************** JobBox  ************/
@@ -304,7 +296,6 @@ main {
   font-weight: 700;
 }
 
-
 .scope,
 .employerLink {
   text-transform: uppercase;
@@ -333,25 +324,6 @@ main {
   }
 }
 
-/* @media only screen and (min-width: 390px) {
-  body {
-    width: 390px;
-    max-height: 844px;
-    outline: auto;
-
-  }
-}
-
-
-
-@media only screen and (min-height: 844px) {
-  body {
-    height: 844px;
-    background-color: lightblue;
-    max-width: 390px;
-  }
-} */
-
 /***************** JobsPage ************/
 
 .jobsList {
@@ -363,5 +335,11 @@ main {
   border: 1px solid #000;
   padding-left: 30px;
   line-height: 1.8;
-
 }
+
+
+/* @media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+} */
