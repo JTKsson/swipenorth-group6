@@ -3,7 +3,7 @@ GIT-RUTIN:
 
 Create branch and first branch commit:---------
 
-$ git checkout -b BRANCHNAME [creates and change to new branch]
+$ git checkout -b BRANCHNAME  //[creates and change to new branch]
 [write some code]
 $ git add .
 $ git commit -m "COMMIT MESSAGE"

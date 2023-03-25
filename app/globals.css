@@ -16,6 +16,11 @@
   --c-vik-light: #657b9f;
 }
 
+p {
+  /* font-family: '--f-inter'; */
+  font-weight: 400;
+}
+
 h3 {
   font-size: 1rem;
   font-weight: 700;
@@ -27,6 +32,7 @@ h4 {
   font-weight: 700;
 }
 
+/***************** Resets ************/
 *,
 *::before,
 *::after {
@@ -34,42 +40,6 @@ h4 {
   padding: 0;
   margin: 0;
   font: inherit;
-}
-
-html {
-  min-height: 100vh;
-  max-width: 100vw;
-  overflow-x: hidden;
-  background-color: #000;
-}
-
-body {
-  /* outline: auto; */
-  max-width: 550px;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  min-height: 100vh;
-  background-color: white;
-}
-
-.main {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  /* padding-top: 20px; */
-}
-
-.main>p {
-  border: 1px solid salmon;
-}
-
-.pagePlaceholder {
-  margin: auto;
-  font-weight: 400;
-  color: #858585;
-  /* font-size: 1rem; */
-  text-align: center;
 }
 
 img,
@@ -92,13 +62,50 @@ a {
   text-decoration: none;
 }
 
+/***************** Resets END ************/
+
+html {
+  min-height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: #000;
+  display: flex;
+}
+
+body {
+  outline: auto;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  height: 100vh;
+  max-height: 844px;
+  background-color: white;
+  display: flex;
+  width: 100vw;
+  max-width: 390px;
+}
+
+.main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  /* padding-top: 20px; */
+}
+
+/*** Skuggtext på tom sida ***/
+.pagePlaceholder {
+  margin: auto;
+  font-weight: 400;
+  color: #858585;
+  /* font-size: 1rem; */
+  text-align: center;
+}
 
 button:hover,
 button {
   outline-color: transparent;
   background-color: transparent;
 }
-
 
 button {
   font-size: 0.75rem;
@@ -112,7 +119,6 @@ button {
   -ms-border-radius: 5em;
   -o-border-radius: 5em;
   text-transform: uppercase;
-
 }
 
 button:hover {
@@ -126,19 +132,11 @@ input:focus-visible {
 }
 
 
-p {
-  /* font-family: '--f-inter'; */
-  font-weight: 400;
-}
 
 .jobDescription,
 .jobSubSubHeading {
   font-size: 14px;
-
 }
-
-h1 {}
-
 
 .jobContainer {
   margin: auto;
@@ -164,7 +162,6 @@ h1 {}
 
 .btnContainer {
   /* justify-self: flex-end; */
-
   padding-top: 1rem;
   display: flex;
   justify-content: space-evenly;
@@ -182,12 +179,11 @@ header {
 }
 
 header>* {
-  outline: auto;
+  /* outline: auto; */
 }
 
 .kommunLogoContainer {
   /* outline: auto; */
-
 }
 
 .logo {
@@ -199,13 +195,13 @@ header>* {
 
 
 /***************** content ************/
-.content {
+/* .content {
   display: flex;
   flex-direction: column;
-}
+} */
 
 main {
-  position: relative;
+  /* position: relative; */
 }
 
 
@@ -331,19 +327,37 @@ main {
   font-weight: 400;
 }
 
-@media only screen and (min-width: 541px) {
-  body {
-    /* background-color: lightblue; */
-    /* height: 960px; */
-    aspect-ratio: 9/16;
+@media only screen and (max-width:389px) {
+  .main {
+    flex-grow: 1;
   }
 }
+
+/* @media only screen and (min-width: 390px) {
+  body {
+    width: 390px;
+    max-height: 844px;
+    outline: auto;
+
+  }
+}
+
+
+
+@media only screen and (min-height: 844px) {
+  body {
+    height: 844px;
+    background-color: lightblue;
+    max-width: 390px;
+  }
+} */
 
 /***************** JobsPage ************/
 
 .jobsList {
   padding-top: 100px;
 }
+
 .jobCell {
   padding: 10px;
   border: 1px solid #000;
