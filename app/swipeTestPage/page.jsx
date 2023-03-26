@@ -4,12 +4,15 @@ import { useSpring, animated } from '@react-spring/web';
 import "./swipeCSS.css";
 import SwipeComp from "./swipeComp";
 import GestureSwipe from "./gestureSwipe";
+import AdCard from "../components/jobCard/jobCardFetch"
 
 export default function MyComponent() {
   return (
     <div className='swipeContainer'>
     {/* <SwipeComp /> */}
     <GestureSwipe />
+    <AdCard />
+
     
     </div>
   )
