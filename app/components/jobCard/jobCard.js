@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import jobCard from "./jobCard.css";
 
 export default function JobCard() {
@@ -33,6 +34,9 @@ export default function JobCard() {
         <div className="btnContainer">
           <button>nej tack</button>
           <button>spara jobb</button>
+        </div>
+        <div className="btnContainer">
+          <Link href="./swipeTestPage"><button className="btnSwipe">Swipe Exp</button></Link>
         </div>
       </div>
     </>

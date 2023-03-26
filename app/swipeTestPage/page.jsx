@@ -8,7 +8,7 @@ import GestureSwipe from "./gestureSwipe";
 export default function MyComponent() {
   return (
     <div className='swipeContainer'>
-    <SwipeComp />
+    {/* <SwipeComp /> */}
     <GestureSwipe />
     
     </div>

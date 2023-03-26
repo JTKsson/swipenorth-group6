@@ -121,10 +121,10 @@ button {
   border: 0.1em solid #000;
   border-radius: 0.2em;
   padding: 0.2em 1em;
-  -webkit-border-radius: 5em;
-  -moz-border-radius: 5em;
-  -ms-border-radius: 5em;
-  -o-border-radius: 5em;
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  -ms-border-radius: 0.2em;
+  -o-border-radius: 0.2em;
   text-transform: uppercase;
 }
 
@@ -136,40 +136,6 @@ button:hover {
 button:focus-visible,
 input:focus-visible {
   /* outline: 1px solid black; */
-}
-
-.jobDescription,
-.jobSubSubHeading {
-  font-size: 14px;
-}
-
-.jobContainer {
-  margin: auto;
-  height: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  width: 80%;
-  padding: 10px;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: -0.01em;
-  padding: 30px;
-  border: #000 1px solid;
-  overflow: hidden;
-}
-
-.btnContainer {
-  /* justify-self: flex-end; */
-  padding-top: 1rem;
-  display: flex;
-  justify-content: space-evenly;
-
 }
 
 /***************** header ************/
@@ -261,62 +227,7 @@ main {
 /***************** END footer  ************/
 
 
-/***************** JobBox  ************/
 
-.jobTitle,
-.employer {
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-}
-
-.about {
-  line-height: 1.8;
-  padding-top: 0.5rem;
-  font-size: 20px;
-  letter-spacing: -0.01em;
-}
-
-.jobHeading,
-.jobSubheading {
-  text-align: center;
-}
-
-.jobSubheading {
-  padding-bottom: 5vh;
-}
-
-.subSubSubHeading {
-  text-transform: uppercase;
-  font-size: 0.813rem;
-
-}
-
-.jobTitle {
-  font-weight: 700;
-}
-
-.scope,
-.employerLink {
-  text-transform: uppercase;
-  font-size: 0.9em;
-  font-weight: 700;
-}
-
-.scope {
-  line-height: 2.5;
-}
-
-.applyBy {
-  line-height: 1.5;
-  font-weight: 400;
-  padding-top: 1rem;
-  font-size: 0.813rem;
-}
-
-.date {
-  font-weight: 400;
-}
 
 @media only screen and (max-width:389px) {
   .main {

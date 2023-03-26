@@ -12,5 +12,5 @@ export default function GestureSwipe() {
   })
 
   // Bind it to a component
-  return <animated.div className="card" {...bind()} style={{ x, y }} />
+  return <animated.div className="card" {...bind()} style={{ x, y }} >Animated div</animated.div>
 }
