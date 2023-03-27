@@ -1,7 +1,6 @@
 'use client'
 import { useRouter } from 'next/navigation';
 import Link from 'next/link'
-import { faFilter } from "@fortawesome/free-regular-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { faCompass } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
