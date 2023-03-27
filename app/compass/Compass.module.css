@@ -1,0 +1,10 @@
+.title {
+  font-size: 45px;
+  color: brown;
+  text-align: center;
+}
+
+.main {
+  background-color: bisque;
+  height: 100vh;
+}

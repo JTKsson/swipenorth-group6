@@ -2,44 +2,55 @@
 
 .tutorialCard {
   background-color: rgb(32, 220, 220, 0.7);
+  box-sizing: border-box;
   display: grid;
   flex-direction:row;
-  box-sizing: border-box;
-  width: 90%;
   height: 70%;
-  top: 80px;
   left: 20px;
   position: absolute;
+  top: 80px;
+  width: 90%;
 }
 
 .arrow {
-  padding: 8px;
-  margin: 8px;
   background-color: bisque;
+    font-size: 26px;
   height: fit-content;
+  margin: 8px;
+  padding: 8px;
   width: fit-content;
 }
 
 .up {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   justify-self: center;
 }
 
 .left {
-
+  align-items: center;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .right {
-
+  align-items: center;
+  display: flex;
+  flex-direction: row;
 }
 
 .down {
+  align-items: center;
   align-self: self-end;
+  display: flex;
+  flex-direction: column;
   justify-self: center;
 }
 
 .leftRight {
+  align-self: center;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-self: center;
 }
