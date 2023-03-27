@@ -1,14 +1,22 @@
+
+
 .tutorialCard {
-  background-color: aqua;
+  background-color: rgb(32, 220, 220, 0.7);
   display: grid;
   flex-direction:row;
   box-sizing: border-box;
+  width: 90%;
+  height: 70%;
+  top: 80px;
+  left: 20px;
+  position: absolute;
 }
 
 .arrow {
   padding: 8px;
   margin: 8px;
   background-color: bisque;
+  height: fit-content;
   width: fit-content;
 }
 
@@ -17,16 +25,21 @@
 }
 
 .left {
-  align-self: center;
-  justify-self: flex-end;
+
 }
 
 .right {
-  align-self: center;
-  justify-self: flex-start;
+
 }
 
 .down {
-  align-self: baseline;
+  align-self: self-end;
   justify-self: center;
+}
+
+.leftRight {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: center;
 }
