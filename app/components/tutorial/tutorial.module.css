@@ -1,0 +1,32 @@
+.tutorialCard {
+  background-color: aqua;
+  display: grid;
+  flex-direction:row;
+  box-sizing: border-box;
+}
+
+.arrow {
+  padding: 8px;
+  margin: 8px;
+  background-color: bisque;
+  width: fit-content;
+}
+
+.up {
+  justify-self: center;
+}
+
+.left {
+  align-self: center;
+  justify-self: flex-end;
+}
+
+.right {
+  align-self: center;
+  justify-self: flex-start;
+}
+
+.down {
+  align-self: baseline;
+  justify-self: center;
+}
