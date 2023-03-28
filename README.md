@@ -15,6 +15,27 @@ $ git branch
 Change branch:---------
 $ git checkout BRANCHNAME
 
+(denna behöver uppdateras, osäker på i vilket steg vi använder den)
+$ git pull —rebase 
+
+Vid felmeddelanden i samband med push:-----------
+
+Ej hantera just nu
+$ git rebase —abort (för att inte hantera konflikten just nu) 
+
+Om konflikt hanterats 
+$ git add . 
+$ git commit -m “fix conflicts with header”
+$ git rebase —continue
+
+Om push succesful
+Kontrollera med $ git log
+
+Om ej succesful 
+Gör om ovan steg
+
+git push (när allt är hanterat och OK) Meddela teamet att dom kan köra en git pull så att dom slipper hantera samma konflikt. 
+
 -----------------------------------------------
 G
 Se alla commits (för att kunna restore. Kan göras i ny branch. ):
