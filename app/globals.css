@@ -224,6 +224,11 @@ main {
   opacity: 70%;
 }
 
+.active {
+  color: black;
+}
+
+ 
 /***************** END footer  ************/
 
 
