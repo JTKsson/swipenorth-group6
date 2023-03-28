@@ -1,5 +1,5 @@
 "use client"
-import { useState, useEffect } from "react";
+import { React, useState } from "react";
 import styles from "./tutorial.module.css"
 import { TfiAngleDoubleUp, TfiAngleDoubleRight, TfiAngleDoubleLeft, TfiAngleDoubleDown, TfiHandPointUp} from "react-icons/tfi";
 
