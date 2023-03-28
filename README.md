@@ -16,6 +16,9 @@ Change branch:---------
 $ git checkout BRANCHNAME
 
 -----------------------------------------------
+G
+Se alla commits (för att kunna restore. Kan göras i ny branch. ):
+$ git reflog show 
 
 
 

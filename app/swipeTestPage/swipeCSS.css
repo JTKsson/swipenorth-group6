@@ -18,5 +18,9 @@
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
     margin: 20px;
-    ;
+}
+
+.jobContainerProvisorisk {
+    display: flex;
+    flex-direction: column;
 }
