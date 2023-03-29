@@ -1,8 +1,8 @@
-import Image from "next/image";
+// import Image from "next/image";
 import { Inter } from "next/font/google";
-import styles from "./page.module.css";
+// import styles from "./page.module.css";
 import bigZeroCola from "./array";
-import styles from "./Drinks.module.css";
+// import styles from "./Drinks.module.css";
 import {useSwipeable} from "react-swipeable";
 
 const inter = Inter({ subsets: ["latin"] });
