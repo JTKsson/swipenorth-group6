@@ -8,6 +8,7 @@ import styles from "./styles.module.css";
 
 const annonserArr = [
   {
+    id: 1,
     workTitle: "Platschef",
     company: "Sodexo AB",
     workTime: "100%",
@@ -17,6 +18,7 @@ const annonserArr = [
       "Som platschef är du ansvarig för Sodexos uppdrag, som bland annat består av industri, kontorsstädning, receptions- och bokningstjänster. I rollen som platschef har du det yttersta ansvaret för leveransen mot kund där du agerar lyhört för kundernas behov samt säkerställer att Sodexo fullföljer sitt uppdrag på bästa sätt. Du kommer även ingå i Sodexos ledningsgrupp för Region Norr.",
   },
   {
+    id: 2,
     workTitle: "Servicetekniker",
     company: "2Complete AB",
     time: "100%",
@@ -26,6 +28,7 @@ const annonserArr = [
       "Arbetsuppgifterna består i huvudsak av service, förebyggande underhåll och reparation av industriportar och dockningslösningar. Arbetet bedrivs huvudsakligen på egen hand ute hos företagets kunder i Skellefteå med omnejd. Du är kundens kontaktperson och deras ansikte utåt i deras serviceorganisation. I denna tjänst förekommer också installationer av industriportar och dockningslösningar.",
   },
   {
+    id: 3,
     workTitle: "Produktionstekniker",
     company: "Minnovation International AB",
     time: "75%",
@@ -35,6 +38,7 @@ const annonserArr = [
       "Som produktionstekniker är du ansvarig för produktionsprocesserna på vår produktionsanläggning. Dina arbetsuppgifter kan exempelvis bestå av kvalitets- och miljöarbete, analysera och förbättra produktionsprocesserna, utveckla arbetsmetoder och även genomförande av dessa, utveckla strukturer för prissättning och ett nära samarbete med de olika avdelningarna för en så effektiv produktionsprocess som möjligt.",
   },
   {
+    id: 4,
     workTitle: "Sjuksköterska, Akuten",
     company: "Region Västerbotten, Akutmottagning Skellefteå",
     time: "100%",
@@ -44,6 +48,7 @@ const annonserArr = [
       "Som medarbetare på akuten möter du hela tiden nya patienter med olika typer av medicinska diagnoser och olycksfall. Det är ett stimulerande arbete som innebär nära samarbete mellan kollegor, yrkesgrupper och andra kliniker.",
   },
   {
+    id: 5,
     workTitle: "Industriarbetare",
     company: "Randstad",
     time: "50%",
@@ -84,6 +89,7 @@ const trans = (r, s) =>
 function Deck() {
   const [cards, setCards] = useState([]);
   const [liked, setLiked] = useState([]);
+  const [noLiked, setNoLiked] = useState([]);
   const [gone] = useState(() => new Set()); // The set flags all the cards that are flicked out
   const [props, api] = useSprings(cards.length, (i) => ({
     ...to(i),
@@ -91,6 +97,7 @@ function Deck() {
   })); // Create a bunch of springs using the helpers above
   // Create a gesture, we're interested in down-state, delta (current-pos - click-pos), direction and velocity
   console.log("liked", liked);
+  console.log("noLiked", noLiked);
   useEffect(() => {
     console.log("setcards");
     setCards(() => annonserArr);
@@ -109,15 +116,22 @@ function Deck() {
       if (!active && trigger) {
         console.log("direction isNorth", yDir === 0 ? "north" : "south");
         const newLike = cards[index];
-        // liked.push({card: cards[index], index})
-        setLiked([...liked, newLike]);
+        const newNoLike = cards[index];
+        // const newNoLike = cards[index];
+
+        // const newSort = card[index];
+        console.log("yDir", yDir);
+        console.log("xDir", xDir);
+        if (yDir === -1) {
+          setLiked([...liked, newLike])
+          //set styles to hidden;
+        } else if (yDir === 1) {
+          setNoLiked([...noLiked, newNoLike]);
+        } else {
+          console.log("swipe error");
+        }
+
         console.log("liked", liked);
-        // setLiked([
-        //   ...liked,
-        //   {
-        //     card: cards[index],
-        //   },
-        // ])
         gone.add(index); // If button/finger's up and trigger velocity is reached, we flag the card ready to fly out
       }
       api.start((i) => {
@@ -166,6 +180,8 @@ function Deck() {
                 <p>Lön {cards[i].salary}</p>
                 <p>{cards[i].lastApplyDate}</p>
                 <p>{cards[i].description}</p>
+                <button>Dela</button>
+                <p>lägga till seen/unseen?</p>
               </div>
             </animated.div>
           </animated.div>
@@ -174,6 +190,7 @@ function Deck() {
     </>
   );
 }
+
 
 export default function PlayingCards() {
   return (
