@@ -5,7 +5,4 @@ const nextConfig = {
   },
 }
 
-module.exports = {
-  nextConfig,
-  reactStrictMode: true,
-}
+module.exports = nextConfig
