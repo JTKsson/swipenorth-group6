@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { useEffect, useState } from "react";
 import { useSprings, animated, to as interpolate } from "@react-spring/web";
@@ -6,17 +6,65 @@ import { useDrag } from "@use-gesture/react";
 
 import styles from "./styles.module.css";
 
-const cardsFetched = [
-  { title: "Hej tilte 1" },
-  { title: "Hej tilte 2" },
-  // <div>Hej 2</div>,
-  // 'https://upload.wikimedia.org/wikipedia/commons/f/f5/RWS_Tarot_08_Strength.jpg',
-  // 'https://upload.wikimedia.org/wikipedia/commons/5/53/RWS_Tarot_16_Tower.jpg',
-  // 'https://upload.wikimedia.org/wikipedia/commons/9/9b/RWS_Tarot_07_Chariot.jpg',
-  // 'https://upload.wikimedia.org/wikipedia/commons/3/3a/TheLovers.jpg',
-  // 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/RWS_Tarot_02_High_Priestess.jpg/690px-RWS_Tarot_02_High_Priestess.jpg',
-  // 'https://upload.wikimedia.org/wikipedia/commons/d/de/RWS_Tarot_01_Magician.jpg',
+const annonserArr = [
+  {
+    workTitle: "Platschef",
+    company: "Sodexo AB",
+    workTime: "100%",
+    lastApplyDate: "2023-04-13",
+    salary: "31'000 - 37'000",
+    description:
+      "Som platschef är du ansvarig för Sodexos uppdrag, som bland annat består av industri, kontorsstädning, receptions- och bokningstjänster. I rollen som platschef har du det yttersta ansvaret för leveransen mot kund där du agerar lyhört för kundernas behov samt säkerställer att Sodexo fullföljer sitt uppdrag på bästa sätt. Du kommer även ingå i Sodexos ledningsgrupp för Region Norr.",
+  },
+  {
+    workTitle: "Servicetekniker",
+    company: "2Complete AB",
+    time: "100%",
+    lastApplyDate: "2023-04-09",
+    salary: "27'000 - 32'000",
+    description:
+      "Arbetsuppgifterna består i huvudsak av service, förebyggande underhåll och reparation av industriportar och dockningslösningar. Arbetet bedrivs huvudsakligen på egen hand ute hos företagets kunder i Skellefteå med omnejd. Du är kundens kontaktperson och deras ansikte utåt i deras serviceorganisation. I denna tjänst förekommer också installationer av industriportar och dockningslösningar.",
+  },
+  {
+    workTitle: "Produktionstekniker",
+    company: "Minnovation International AB",
+    time: "75%",
+    lastApplyDate: "2023-05-01",
+    salary: "30'000 - 33'000",
+    description:
+      "Som produktionstekniker är du ansvarig för produktionsprocesserna på vår produktionsanläggning. Dina arbetsuppgifter kan exempelvis bestå av kvalitets- och miljöarbete, analysera och förbättra produktionsprocesserna, utveckla arbetsmetoder och även genomförande av dessa, utveckla strukturer för prissättning och ett nära samarbete med de olika avdelningarna för en så effektiv produktionsprocess som möjligt.",
+  },
+  {
+    workTitle: "Sjuksköterska, Akuten",
+    company: "Region Västerbotten, Akutmottagning Skellefteå",
+    time: "100%",
+    lastApplyDate: "2023-04-19",
+    salary: "34'000 - 39'000",
+    description:
+      "Som medarbetare på akuten möter du hela tiden nya patienter med olika typer av medicinska diagnoser och olycksfall. Det är ett stimulerande arbete som innebär nära samarbete mellan kollegor, yrkesgrupper och andra kliniker.",
+  },
+  {
+    workTitle: "Industriarbetare",
+    company: "Randstad",
+    time: "50%",
+    lastApplyDate: "2023-04-20",
+    salary: "25'000-27'000",
+    description:
+      "Som konsult hos Randstad är du anställd hos oss och jobbar ute hos någon av våra kunder. Du har samma fördelar hos Randstad som hos andra arbetsgivare med kollektivavtal och förmåner som friskvårdsbidrag, företagshälsovård, försäkringar och rabatt på träningskort. Tjänsten kan innebära många kontakter och då är det är viktigt att du har en bra samarbetsförmåga.",
+  },
 ];
+
+// const cardsFetched = [
+//   { title: "Hej tilte 1" },
+//   { title: "Hej tilte 2" },
+//   // <div>Hej 2</div>,
+//   // 'https://upload.wikimedia.org/wikipedia/commons/f/f5/RWS_Tarot_08_Strength.jpg',
+//   // 'https://upload.wikimedia.org/wikipedia/commons/5/53/RWS_Tarot_16_Tower.jpg',
+//   // 'https://upload.wikimedia.org/wikipedia/commons/9/9b/RWS_Tarot_07_Chariot.jpg',
+//   // 'https://upload.wikimedia.org/wikipedia/commons/3/3a/TheLovers.jpg',
+//   // 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/RWS_Tarot_02_High_Priestess.jpg/690px-RWS_Tarot_02_High_Priestess.jpg',
+//   // 'https://upload.wikimedia.org/wikipedia/commons/d/de/RWS_Tarot_01_Magician.jpg',
+// ];
 
 // These two are just helpers, they curate spring data, values that are later being interpolated into css
 const to = (i) => ({
@@ -45,7 +93,7 @@ function Deck() {
   console.log("liked", liked);
   useEffect(() => {
     console.log("setcards");
-    setCards(() => cardsFetched);
+    setCards(() => annonserArr);
   }, []);
   const bind = useDrag(
     ({
@@ -112,7 +160,13 @@ function Deck() {
                 // backgroundImage: `url(${cards[i]})`,
               }}
             >
-              <div>{cards[i].title}</div>
+              <div>
+                <p>{cards[i].workTitle}</p>
+                <p>Omfattning {cards[i].workTime}</p>
+                <p>Lön {cards[i].salary}</p>
+                <p>{cards[i].lastApplyDate}</p>
+                <p>{cards[i].description}</p>
+              </div>
             </animated.div>
           </animated.div>
         );
