@@ -166,6 +166,7 @@ function Deck() {
                 <p>Lön {cards[i].salary}</p>
                 <p>{cards[i].lastApplyDate}</p>
                 <p>{cards[i].description}</p>
+                <button>Dela</button>
               </div>
             </animated.div>
           </animated.div>
