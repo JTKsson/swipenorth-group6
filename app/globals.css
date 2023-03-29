@@ -224,8 +224,13 @@ main {
   opacity: 70%;
 }
 
-.active {
+.menu-link a.active {
   color: black;
+  border: 1px solid blue;
+}
+
+.active {
+  font-weight: bold;
 }
 
  
