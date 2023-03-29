@@ -89,6 +89,7 @@ const trans = (r, s) =>
 function Deck() {
   const [cards, setCards] = useState([]);
   const [liked, setLiked] = useState([]);
+  const [noLiked, setNoLiked] = useState([]);
   const [gone] = useState(() => new Set()); // The set flags all the cards that are flicked out
   const [props, api] = useSprings(cards.length, (i) => ({
     ...to(i),
@@ -96,6 +97,7 @@ function Deck() {
   })); // Create a bunch of springs using the helpers above
   // Create a gesture, we're interested in down-state, delta (current-pos - click-pos), direction and velocity
   console.log("liked", liked);
+  console.log("noLiked", noLiked);
   useEffect(() => {
     console.log("setcards");
     setCards(() => annonserArr);
@@ -114,8 +116,22 @@ function Deck() {
       if (!active && trigger) {
         console.log("direction isNorth", yDir === 0 ? "north" : "south");
         const newLike = cards[index];
+        const newNoLike = cards[index];
+        // const newNoLike = cards[index];
+
+        // const newSort = card[index];
+        console.log("yDir", yDir);
+        console.log("xDir", xDir);
+        if (yDir === -1) {
+          setLiked([...liked, newLike]);
+        } else if (yDir === 1) {
+          setNoLiked([...noLiked, newNoLike]);
+        } else {
+          console.log("swipe error");
+        }
         // liked.push({card: cards[index], index})
-        setLiked([...liked, newLike]);
+        // setLiked([...liked, newLike]);
+
         console.log("liked", liked);
         // setLiked([
         //   ...liked,
