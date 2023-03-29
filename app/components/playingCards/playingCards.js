@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useSprings, animated, to as interpolate } from "@react-spring/web";
 import { useDrag } from "@use-gesture/react";
 
-import styles from "./styles.module.css";
+import styles from "./playingCards.module.css";
 
 const annonserArr = [
   {
@@ -174,8 +174,8 @@ function Deck() {
                 // backgroundImage: `url(${cards[i]})`,
               }}
             >
-              <div>
-                <p>{cards[i].workTitle}</p>
+              <div className={styles.cardcontent}>
+                <p >{cards[i].workTitle}</p>
                 <p>Omfattning {cards[i].workTime}</p>
                 <p>Lön {cards[i].salary}</p>
                 <p>{cards[i].lastApplyDate}</p>

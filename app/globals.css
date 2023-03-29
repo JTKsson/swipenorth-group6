@@ -70,6 +70,7 @@ html {
   overflow-x: hidden;
   background-color: #000;
   display: flex;
+  overflow: hidden;
 }
 
 body {
@@ -90,6 +91,8 @@ body {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   -webkit-border-radius: 15px;
+  position: relative;
+  overflow: hidden;
 }
 
 .main {
@@ -169,11 +172,6 @@ header>* {
   display: flex;
   flex-direction: column;
 } */
-
-main {
-  /* position: relative; */
-}
-
 
 /***************** footer ************/
 
