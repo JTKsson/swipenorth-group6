@@ -123,22 +123,15 @@ function Deck() {
         console.log("yDir", yDir);
         console.log("xDir", xDir);
         if (yDir === -1) {
-          setLiked([...liked, newLike]);
+          setLiked([...liked, newLike])
+          //set styles to hidden;
         } else if (yDir === 1) {
           setNoLiked([...noLiked, newNoLike]);
         } else {
           console.log("swipe error");
         }
-        // liked.push({card: cards[index], index})
-        // setLiked([...liked, newLike]);
 
         console.log("liked", liked);
-        // setLiked([
-        //   ...liked,
-        //   {
-        //     card: cards[index],
-        //   },
-        // ])
         gone.add(index); // If button/finger's up and trigger velocity is reached, we flag the card ready to fly out
       }
       api.start((i) => {
@@ -197,6 +190,7 @@ function Deck() {
     </>
   );
 }
+
 
 export default function PlayingCards() {
   return (
