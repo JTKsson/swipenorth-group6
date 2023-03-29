@@ -5,14 +5,16 @@ import { TfiAngleDoubleUp, TfiAngleDoubleRight, TfiAngleDoubleLeft, TfiAngleDoub
 
 const Tutorial = () => {
 
-  const [isHidden, setIsHidden] = useState(false);
+  const [isHidden, setIsHidden] = useState(true);
 
   useEffect(() => {
     const storedIsHidden = localStorage.getItem("isHidden");
     // localStorage.getItem("isHidden");
-    if (storedIsHidden === "false") {
-      setIsHidden(false);
-    }
+    console.log(storedIsHidden)
+    
+    // if (storedIsHidden === "false") {
+      setIsHidden(storedIsHidden || false);
+    // }
     //  else {
     //   setIsHidden(true);
     // }
