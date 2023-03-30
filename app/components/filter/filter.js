@@ -1,5 +1,6 @@
-import { useState } from "react";
-// import annonserArr from "../../../pages/api/jobbannonser/jobbannonser.js"
+"use client"
+import { resolveConfigFile } from "prettier";
+import React, { useState } from "react";
 
 function FilteredList({ annonserArr }) {
   const [selectedFilters, setSelectedFilters] = useState([]);
