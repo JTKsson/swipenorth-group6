@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { Inter } from "next/font/google";
 import { annonserArr } from "../../pages/api/jobbannonser/jobbannonser";
-import styles from '../savedJobs';
+import styles from './savedJobs/page.module.css';
 
 const inter = Inter({ subsets: ["latin"] });
 
