@@ -1,15 +1,15 @@
 "use client";
 import { useState, useEffect } from "react";
-import styles from "../sparadeJobb/page.module.css";
+
 
 const page = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [popupMessage, setPopupMessage] = useState("");
   const [boxes, setBoxes] = useState([]);
-
+ 
   useEffect(() => {
     // data from API
-    fetch("")
+    fetch(annonserArr)
       .then(response => response.json())
       .then(data => {
         //boxes with data from API
