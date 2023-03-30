@@ -1,20 +1,10 @@
 'use client'
 import Link from 'next/link'
-import { faHeart } from "@fortawesome/free-regular-svg-icons";
-import { faCompass } from "@fortawesome/free-regular-svg-icons";
-import { faFilter} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { usePathname } from 'next/navigation';
-import { VscCompass } from 'react-icons/fa';
-import { IconName } from "react-icons/ai";
 import { CiSliderHorizontal, CiHeart, CiCompass1 } from "react-icons/ci"
-
-
 
 const Footer = () => {
   const pathname = usePathname();
-
-  console.log(pathname);
   return (
     <footer className="footer">
         <nav>
@@ -40,7 +30,6 @@ const Footer = () => {
               </Link>
             </li>
             <li className='menu-item'>
-
             <Link 
                 href="../profilePage" 
                 className={'menu-link' + (pathname === '/profilePage' ? ' active' : '')}
