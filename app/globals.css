@@ -70,6 +70,7 @@ html {
   overflow-x: hidden;
   background-color: #000;
   display: flex;
+  overflow: hidden;
 }
 
 body {
@@ -90,6 +91,8 @@ body {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   -webkit-border-radius: 15px;
+  position: relative;
+  overflow: hidden;
 }
 
 .main {
@@ -171,11 +174,6 @@ header>* {
   flex-direction: column;
 } */
 
-main {
-  /* position: relative; */
-}
-
-
 /***************** footer ************/
 
 .footer {
@@ -199,14 +197,6 @@ main {
 }
 
 .menu-link {
-  font-size: 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.menu-link {
-  font-size: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -215,8 +205,7 @@ main {
 .menu-fa {
   color: var(--c-bar-light);
   fill: var(--c-bar-light);
-  width: 30px;
-  height: 30px;
+  font-size: 32px;
   align-items: center;
   margin-bottom: 5px;
 }
@@ -225,10 +214,12 @@ main {
   opacity: 70%;
 }
 
+.active .menu-fa{
+  font-weight: 900;
+  color: aqua;
+}
+
 /***************** END footer  ************/
-
-
-
 
 @media only screen and (max-width:389px) {
   .main {
