@@ -1,4 +1,4 @@
-const annonserArr = [
+export const annonserArr = [
   {
     id: 1,
     workTitle: "Platschef",
