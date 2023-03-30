@@ -7,6 +7,7 @@ import KommunLogo from "public/logo-Kommun-black.png";
 import DummyLogo from "public/Dummy-logo-SwN.svg";
 import FilterSlider from "public/filter-slider.svg";
 
+
 function Header() {
   return (
     <header>

@@ -10,6 +10,7 @@ import { IconName } from "react-icons/ai";
 import { CiSliderHorizontal, CiHeart, CiCompass1 } from "react-icons/ci"
 
 
+
 const Footer = () => {
   const pathname = usePathname();
 

@@ -7,15 +7,28 @@ export default function JobCardFetch() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [sparadeJobData, setSparadeJobData] = useState([]);
   // const currentAd = ads[currentIndex];
+  const nejTackJobb = [];
+  const sparadeJobb = [];
 
   const handleNejTackClick = () => {
     console.log("nej tack button clicked");
-    setCurrentIndex((currentIndex - 1) % ads.length);
+    const currentCard = ads[currentIndex];
+    // console.log(currentCard);
+    const moveNejTack = ads.slice(currentIndex, currentIndex + 1);
+    console.log(moveNejTack);
+    // setCurrentIndex((currentIndex - 1) % ads.length);
+    nejTackJobb.push(moveNejTack[0]);
+    console.log("nejTackJobb", nejTackJobb);
   };
 
   const handleSparaClick = () => {
     console.log("spara button clicked");
     setCurrentIndex((currentIndex + 1) % ads.length);
+     // console.log(currentCard);
+     const moveSpara = ads.slice(currentIndex, currentIndex + 1);
+     console.log("moveSpara", moveSpara);
+     sparadeJobb.push(moveSpara[0]);
+     console.log("sparadeJobb", sparadeJobb);
   };
 
   const handlePrevClick = () => {
@@ -37,7 +50,7 @@ export default function JobCardFetch() {
 
     fetchData();
   }, []);
-  console.log(ads);
+  // console.log(ads);
 
   if (!ads) {
     return <div>Loading...</div>;
@@ -47,7 +60,7 @@ export default function JobCardFetch() {
     <div>
       {ads.map((ad, index) => (
         <div
-          className="jobContainer"
+          className="jobContainerProvisorisk"
           key={ad.annonsId}
           style={{ display: index === currentIndex ? "flex" : "none" }}
         >
@@ -60,6 +73,7 @@ export default function JobCardFetch() {
               : "Se adress"}
           </p>
           <p>current index: {index}</p>
+          <p>Lönenivå: -</p>
           <div className="btnContainer">
             <div>
               <button onClick={handleNejTackClick}>Nej Tack</button>
