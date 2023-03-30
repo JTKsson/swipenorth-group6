@@ -28,14 +28,9 @@ const Tutorial = () => {
   return (
     <>
     {!isHidden && ( <div className={styles.tutorialCard}> 
-      <p className={`${styles.arrow} ${styles.up}`}><TfiAngleDoubleUp />upp</p>
-      <div className={styles.leftRight}>
-       <p className={`${styles.arrow} ${styles.left}`}>vänster<TfiAngleDoubleLeft /></p>
-       <p className={`${styles.arrow} ${styles.right}`}>höger<TfiAngleDoubleRight /></p>
-      </div>
-      <p className={`${styles.pointer} ${styles.arrow}`}><TfiHandPointUp /> Tryck och håll</p>
-      <p className={`${styles.arrow} ${styles.down}`}>ner<TfiAngleDoubleDown /></p>
-      <button className={styles.hide} onClick={handleHide}>Okej!</button>
+      <p className={`${styles.arrow} ${styles.up}`}><TfiAngleDoubleUp />Swipa norrut för de jobb du gillar</p>
+      <p className={`${styles.arrow} ${styles.down}`}>Swipa ner för de jobb som inte är intressanta<TfiAngleDoubleDown /></p>
+      <button className={`${styles.button}`} onClick={handleHide}>Okej!</button>
     </div>
     )}
     </>

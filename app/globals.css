@@ -84,17 +84,17 @@ body {
   flex-direction: column;
   margin: auto;
   height: 100vh;
-  max-height: 844px;
+  /* max-height: 844px; */
   background-color: white;
   display: flex;
   width: 100vw;
-  max-width: 390px;
+  /* max-width: 390px;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-  -webkit-border-radius: 15px;
+  -webkit-border-radius: 15px; */
   position: relative;
   overflow: hidden;
 }
@@ -182,7 +182,7 @@ header>* {
 /***************** footer ************/
 
 .footer {
-  background-color: #657b9fcb;
+  background-color: #657b9fe1;
   padding: 20px 0;
   /* position: sticky;
   bottom: 0px; */
@@ -208,7 +208,7 @@ header>* {
 }
 
 .menu-fa {
-  color: #000000;
+  color: #ffffff;
   fill: #000000;
   font-size: 32px;
   align-items: center;
@@ -223,7 +223,7 @@ header>* {
   background-color: #000000;
   border-radius: 50%;
   font-weight: 900;
-  color: #5DD3FF;
+  color: #ffffff;
 }
 
 /***************** END footer  ************/
