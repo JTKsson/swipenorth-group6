@@ -27,13 +27,6 @@ function Header() {
           <Image src={DummyLogo} alt="Logo" height={100} />
         </Link>
       </div>
-      <Image src={FilterSlider} alt="Filter icon" height={30} />
-      {/* <div className="sort">
-            <FontAwesomeIcon icon={faSort} />
-        </div>
-        <div className="filter">
-            <FontAwesomeIcon icon={faFilter} />
-        </div>  */}
     </header>
   );
 }

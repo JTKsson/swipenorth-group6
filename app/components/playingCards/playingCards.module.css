@@ -5,33 +5,42 @@
 }
 
 .deck {
-    position: absolute;
-    width: 300px;
-    height: 200px;
-    will-change: transform;
-    display: flex;
     align-items: center;
+    bottom: 0;
+    box-sizing: border-box;
+    display: flex;
+    height: 200px;
     justify-content: center;
+    left: 0px;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    width: 300px;
+    will-change: transform;
 }
 
 .deck>div {
-    touch-action: none;
-    background-color: white;
-    background-size: auto 85%;
-    background-repeat: no-repeat;
+    backdrop-filter: blur(4px);
+    background-color: #5dd4ff96;
     background-position: center center;
-    width: 45vh;
-    max-width: 300px;
-    height: 85vh;
-    max-height: 570px;
-    will-change: transform;
+    background-repeat: no-repeat;
+    background-size: auto 85%;
     border-radius: 10px;
     box-shadow: 0 12.5px 100px -10px rgba(50, 50, 73, 0.4), 0 10px 10px -10px rgba(50, 50, 73, 0.3);
+    height: 85vh;
+    max-height: 570px;
+    max-width: 300px;
+    padding: 16px;
+    touch-action: none;
+    width: 45vh;
+    will-change: transform;
 }
 
 
 
 .cardcontent>p {
+    margin-top: 8px;
     -webkit-touch-callout: none;
     /* iOS Safari */
     -webkit-user-select: none;
@@ -45,3 +54,27 @@
     user-select: none;
     /* Modern browsers */
 }
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.btn {
+    align-items: center;
+    background-color: transparent;
+    border-color: var(--cbtn-filter);
+    border-radius: 200px;
+    border-width: 1px; 
+    color: var(--cbtn-filter);
+    display: inline-flex;
+    font-size: 0.813rem; 
+    font-weight: 400;
+    justify-content: center;
+    line-height: 1;
+    margin-top: 8px;
+    margin-bottom: 0.625em; 
+    padding: 0.5em 1.25em;
+    text-align: center;
+    transition: background-color,border-color,color .2s ease; 
+    }

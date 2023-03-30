@@ -13,7 +13,7 @@ export const annonserArr = [
     id: 2,
     workTitle: "Servicetekniker",
     company: "2Complete AB",
-    time: "100%",
+    workTime: "100%",
     lastApplyDate: "2023-04-09",
     salary: "27'000 - 32'000",
     description:
@@ -23,7 +23,7 @@ export const annonserArr = [
     id: 3,
     workTitle: "Produktionstekniker",
     company: "Minnovation International AB",
-    time: "75%",
+    workTime: "75%",
     lastApplyDate: "2023-05-01",
     salary: "30'000 - 33'000",
     description:
@@ -33,7 +33,7 @@ export const annonserArr = [
     id: 4,
     workTitle: "Sjuksköterska, Akuten",
     company: "Region Västerbotten, Akutmottagning Skellefteå",
-    time: "100%",
+    workTime: "100%",
     lastApplyDate: "2023-04-19",
     salary: "34'000 - 39'000",
     description:
@@ -43,7 +43,7 @@ export const annonserArr = [
     id: 5,
     workTitle: "Industriarbetare",
     company: "Randstad",
-    time: "50%",
+    workTime: "50%",
     lastApplyDate: "2023-04-20",
     salary: "25'000-27'000",
     description:

@@ -76,6 +76,10 @@ html {
 body {
   /*outline: auto;
   */
+  background-color: #5DD3FF;
+  background-image: url(../public/citybackground.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -96,6 +100,7 @@ body {
 }
 
 .main {
+
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -177,11 +182,11 @@ header>* {
 /***************** footer ************/
 
 .footer {
-  /* background-color: #f2f2f2; */
+  background-color: #657b9fcb;
   padding: 20px 0;
   /* position: sticky;
   bottom: 0px; */
-  border-top: 1px solid black;
+  /* border-top: 1px solid black; */
 }
 
 .footer-menu {
@@ -192,7 +197,7 @@ header>* {
   margin: 0;
   padding: 0;
   margin: 0 20px;
-  color: var(--c-bar-dark);
+  color: #000000;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -203,8 +208,8 @@ header>* {
 }
 
 .menu-fa {
-  color: var(--c-bar-light);
-  fill: var(--c-bar-light);
+  color: #000000;
+  fill: #000000;
   font-size: 32px;
   align-items: center;
   margin-bottom: 5px;
@@ -215,8 +220,10 @@ header>* {
 }
 
 .active .menu-fa{
+  background-color: #000000;
+  border-radius: 50%;
   font-weight: 900;
-  color: aqua;
+  color: #5DD3FF;
 }
 
 /***************** END footer  ************/
