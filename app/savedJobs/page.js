@@ -35,9 +35,11 @@ export default function SavedJobsPage() {
         <div className={styles.popupContent}>
           <h1>{job.workTitle}</h1>
           <h2>{job.company}</h2>
+          <br />
           <h3>{job.time}</h3>
-          <p>{job.lastApplyDate}</p>
-          <p>{job.salary}</p>
+          <p>Sista ansökn.: {job.lastApplyDate}</p>
+          <p>Lön: {job.salary}</p>
+          <br />
           <p>{job.description}</p>
           <div className={styles.popupButtons}>
             <button onClick={() => console.log("Button 1 clicked!")}>
