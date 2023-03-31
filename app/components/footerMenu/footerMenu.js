@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation';
 import { CiSliderHorizontal, CiHeart, CiCompass1 } from "react-icons/ci"
 
+
 const Footer = () => {
   const pathname = usePathname();
   return (
