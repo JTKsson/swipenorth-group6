@@ -2,6 +2,7 @@
 
 import { Inter } from "next/font/google";
 import CheckboxList from '../components/filterSortIconComp'
+import styles from "./filter.module.css"
 
 const options = ['IT', 'Sjukvård', 'Skola', 'Transport']
 const salary = ['25 0000 - 30 000', '31 000 - 36 000']
@@ -13,25 +14,25 @@ const MyPage = () => {
   }
 
   return (
-    <>
+    <section className={styles.filterContent}>
     <div>
-      <h1>Branch</h1>
+      <h2 className={styles.title}>Branch</h2>
       <CheckboxList options={options} onFilter={handleFilter} />
     </div>
     <div>
-      <h1>Yrke</h1>
+      <h2 className={styles.title}>Yrke</h2>
       <CheckboxList options={profession} onFilter={handleFilter} />
     </div>
     <div>
-      <h1>Lönspann</h1>
+      <h2 className={styles.title}>Lönespann</h2>
       <CheckboxList options={salary} onFilter={handleFilter}/>
     </div>
     <div>
-      <h1>Möjlighet att jobba på distans</h1>
+      <h2 className={styles.title}>Möjlighet att jobba på distans</h2>
       <CheckboxList options={remote} onFilter={handleFilter} />
     </div>
-    <button onClick={handleFilter}>Filtrera</button>
-    </>
+    <button className={styles.btn} onClick={handleFilter}>Filtrera</button>
+    </section>
   )
 }
 

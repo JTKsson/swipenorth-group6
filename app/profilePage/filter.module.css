@@ -1,0 +1,35 @@
+.filterContent {
+    background-color: #5dd4ffa7;
+    padding: 16px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.filterContent>div {
+    margin-bottom: 8px;
+}
+
+.btn {
+    align-items: center;
+    background-color: transparent;
+    border-color: var(--cbtn-filter);
+    border-radius: 200px;
+    border-width: 1px; 
+    color: var(--cbtn-filter);
+    display: inline-flex;
+    font-size: 0.813rem;
+    font-weight: 400;
+    justify-content: center;
+    line-height: 1;
+    margin-bottom: 0.625em;
+    padding: 0.5em 1.25em;
+    text-align: center;
+    transition: background-color, border-color, color .2s ease;
+    }
+
+    .title {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
