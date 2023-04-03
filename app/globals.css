@@ -14,11 +14,15 @@
   --c-skog-light: #9eb45a;
   --c-vik-dark: #455b81;
   --c-vik-light: #657b9f;
+
+  --cbtn-filter-prim: #fff;
+  --cbtn-filter-sec: #0086A7;
 }
 
 p {
   /* font-family: '--f-inter'; */
   font-weight: 400;
+  color: #fff;
 }
 
 h3 {
@@ -134,7 +138,6 @@ button {
   -moz-border-radius: 0.2em;
   -ms-border-radius: 0.2em;
   -o-border-radius: 0.2em;
-  text-transform: uppercase;
 }
 
 button:hover {
@@ -219,7 +222,7 @@ header>* {
   opacity: 70%;
 }
 
-.active .menu-fa{
+.active .menu-fa {
   background-color: #000000;
   border-radius: 50%;
   font-weight: 900;

@@ -7,7 +7,6 @@ import { annonserArr } from "@/pages/api/jobbannonser/jobbannonser";
 
 import styles from "./playingCards.module.css";
 
-
 // These two are just helpers, they curate spring data, values that are later being interpolated into css
 const to = (i) => ({
   x: 0,
@@ -28,6 +27,8 @@ function Deck() {
   const [liked, setLiked] = useState([]);
   const [noLiked, setNoLiked] = useState([]);
   const [gone] = useState(() => new Set()); // The set flags all the cards that are flicked out
+  const [hidden, setHidden] = useState(false);
+
   const [props, api] = useSprings(cards.length, (i) => ({
     ...to(i),
     from: from(i),
@@ -35,6 +36,7 @@ function Deck() {
   // Create a gesture, we're interested in down-state, delta (current-pos - click-pos), direction and velocity
   console.log("liked", liked);
   console.log("noLiked", noLiked);
+
   useEffect(() => {
     console.log("setcards");
     setCards(() => annonserArr);
@@ -54,13 +56,13 @@ function Deck() {
         console.log("direction isNorth", yDir === 0 ? "north" : "south");
         const newLike = cards[index];
         const newNoLike = cards[index];
-        // const newNoLike = cards[index];
 
-        // const newSort = card[index];
         console.log("yDir", yDir);
         console.log("xDir", xDir);
+        setHidden(hidden); /* HÄÄÄÄÄR ÄR JAG!*/
+
         if (yDir === -1) {
-          setLiked([...liked, newLike])
+          setLiked([...liked, newLike]);
           //set styles to hidden;
         } else if (yDir === 1) {
           setNoLiked([...noLiked, newNoLike]);
@@ -102,7 +104,11 @@ function Deck() {
       {props.map(({ x, y, rot, scale }, i) => {
         // console.log('x, y', x, y)
         return (
-          <animated.div className={styles.deck} key={i} style={{ x, y }}>
+          <animated.div
+            className={`styles.deck ${hidden ? "hidden" : ""}`}
+            key={i}
+            style={{ x, y }}
+          >
             {/* This is the card itself, we're binding our gesture to it (and inject its index so we know which is which) */}
             <animated.div
               {...bind(i)}
@@ -118,7 +124,7 @@ function Deck() {
                 <p>Sista ansökningsdag: {cards[i].lastApplyDate}</p>
                 <p>{cards[i].description}</p>
                 <button className={styles.btn}>Dela</button>
-                <p>lägga till seen/unseen?</p>
+                {/* <p>lägga till seen/unseen?</p> */}
               </div>
             </animated.div>
           </animated.div>
@@ -127,7 +133,6 @@ function Deck() {
     </>
   );
 }
-
 
 export default function PlayingCards() {
   return (

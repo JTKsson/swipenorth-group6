@@ -63,18 +63,22 @@
 .btn {
     align-items: center;
     background-color: transparent;
-    border-color: var(--cbtn-filter);
+    border-color: var(--cbtn-filter-prim);
     border-radius: 200px;
-    border-width: 1px; 
+    border-width: 1px;
     color: var(--cbtn-filter);
     display: inline-flex;
-    font-size: 0.813rem; 
+    font-size: 0.813rem;
     font-weight: 400;
     justify-content: center;
     line-height: 1;
     margin-top: 8px;
-    margin-bottom: 0.625em; 
+    margin-bottom: 0.625em;
     padding: 0.5em 1.25em;
     text-align: center;
-    transition: background-color,border-color,color .2s ease; 
-    }
+    transition: background-color, border-color, color .2s ease;
+    -webkit-transition: background-color, border-color, color .2s ease;
+    -moz-transition: background-color, border-color, color .2s ease;
+    -ms-transition: background-color, border-color, color .2s ease;
+    -o-transition: background-color, border-color, color .2s ease;
+}
