@@ -15,8 +15,12 @@
   --c-vik-dark: #455b81;
   --c-vik-light: #657b9f;
 
+<<<<<<< HEAD
   --cbtn-filter-prim: #fff;
   --cbtn-filter-sec: #0086A7;
+=======
+  --background-color: linear-gradient(180deg, rgba(89, 194, 233, 0.8) 0%, rgba(29, 183, 255, 0.8) 33.65%, rgba(94, 192, 255, 0.8) 65.42%, rgba(94, 195, 255, 0.8) 100%);
+>>>>>>> 242e8761dc8d9901d5478ae5579f164e6b62a951
 }
 
 p {
@@ -182,6 +186,7 @@ header>* {
   flex-direction: column;
 } */
 
+<<<<<<< HEAD
 /***************** footer ************/
 
 .footer {
@@ -231,6 +236,8 @@ header>* {
 
 /***************** END footer  ************/
 
+=======
+>>>>>>> 242e8761dc8d9901d5478ae5579f164e6b62a951
 @media only screen and (max-width:389px) {
   .main {
     flex-grow: 1;

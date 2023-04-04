@@ -1,0 +1,44 @@
+.footer {
+  background: var(--background-color);
+  padding: 20px 0;
+  /* position: sticky;
+  bottom: 0px; */
+  /* border-top: 1px solid black; */
+}
+
+.footerMenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin: 0 20px;
+  color: #000000;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.menuLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menuFa {
+  color: #ffffff;
+  fill: #000000;
+  font-size: 32px;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.menu-fa:hover {
+  opacity: 70%;
+}
+
+.active .menuFa{
+  background-color: #000000;
+  border-radius: 50%;
+  font-weight: 900;
+  color: #ffffff;
+}

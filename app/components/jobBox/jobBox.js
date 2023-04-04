@@ -1,5 +1,4 @@
 import React from "react";
-import jobBox from "./jobBox.css";
 
 export default function JobBox() {
   return (
@@ -35,5 +34,5 @@ export default function JobBox() {
         </div>
       </div>
     </>
-  );
+  )
 }

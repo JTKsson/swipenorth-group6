@@ -1,21 +1,21 @@
-"use client"
-import { useState, useEffect, useRef } from "react";
+"use client";
+import { useState, useEffect, useRef } from "react"; //React hooks för att uppdatera informationen på sidan
 import { Inter } from "next/font/google";
-import { annonserArr } from "../../pages/api/jobbannonser/jobbannonser";
-import styles from "./page.module.css";
+import { annonserArr } from "../../pages/api/jobbannonser/jobbannonser"; //Importerad array från en annan fil
+import styles from "./page.module.css"; //Modul css
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function SavedJobsPage() {
-  const [jobs, setJobs] = useState([]);
-  const [showPopup, setShowPopup] = useState(false);
-  const [popupMessage, setPopupMessage] = useState({});
+  const [showPopup, setShowPopup] = useState(false); //false är för att popupen inte ska visas förrän vi vill det
+  const [popupMessage, setPopupMessage] = useState({}); //visar innehållet i popupen vid knapptryck. en separat useState för att det är olika rutor som visas
 
   const popupRef = useRef(null);
 
   useEffect(() => {
     const handleOutsideClick = (e) => {
       if (popupRef.current && !popupRef.current.contains(e.target)) {
+        //denna funktion är för att minimera popuppen när man trycker utanför popupen
         setShowPopup(false);
       }
     };
@@ -28,6 +28,7 @@ export default function SavedJobsPage() {
   }, [popupRef]);
 
   const handleTabClick = (job) => {
+    //onclick-event styr vilket jobbs popup som ska visas.
     setShowPopup(true);
     setPopupMessage({
       title: job.workTitle,
@@ -55,6 +56,7 @@ export default function SavedJobsPage() {
   };
 
   return (
+    // allt detta för att hämta rätt data från api:n
     <div className={styles.container}>
       {annonserArr.map((job) => (
         <div
