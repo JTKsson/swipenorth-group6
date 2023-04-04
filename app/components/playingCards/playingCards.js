@@ -6,6 +6,7 @@ import { useDrag } from "@use-gesture/react";
 import { annonserArr } from "@/pages/api/jobbannonser/jobbannonser";
 import styles from "./playingCards.module.css";
 import { dislikedAD } from "@/pages/api/dislikeAd/dislikeAd";
+import { likedAD } from "@/pages/api/likedAd/likedAd";
 
 // These two are just helpers, they curate spring data, values that are later being interpolated into css
 const to = (i) => ({
@@ -18,12 +19,11 @@ const to = (i) => ({
 const from = (_i) => ({ x: 0, rot: 0, scale: 1.5, y: -1000 });
 // This is being used down there in the view, it interpolates rotation and scale into a css transform
 const trans = (r, s) =>
-  `perspective(1500px) rotateX(30deg) rotateY(${
+  `perspective(12000px) rotateX(30deg) rotateY(${
     r / 10
   }deg) rotateZ(${r}deg) scale(${s})`;
 
 function Deck() {
-  console.log("dislikedAD", dislikedAD);
   const [cards, setCards] = useState([]);
   const [liked, setLiked] = useState([]);
   const [noLiked, setNoLiked] = useState([]);
@@ -55,41 +55,38 @@ function Deck() {
         const newLike = cards[index];
         const newNoLike = cards[index];
         // const newNoLike = cards[index];
-
         // const newSort = card[index];
-        console.log("yDir", yDir);
-        console.log("xDir", xDir);
+        // console.log("yDir", yDir);
+        // console.log("xDir", xDir);
+
         if (yDir === -1) {
-          setLiked([...liked, newLike]);
+          // setLiked([...liked, newLike]);
           //set styles to hidden;
+          const likedCard = cards[index];
+          likedAD.push(likedCard);
         } else if (yDir === 1) {
-          setNoLiked([...noLiked, newNoLike]);
+          // setNoLiked([...noLiked, newNoLike]);
           const noLikedCard = cards[index];
           dislikedAD.push(noLikedCard);
           console.log("index", index);
           // console.log("dislikedAD", dislikedAD)
           console.log("cards.length", cards.length);
-         
         } else {
           console.log("swipe error");
         }
 
         console.log("liked", liked);
         gone.add(index); // If button/finger's up and trigger velocity is reached, we flag the card ready to fly out
-      
       }
       api.start((i) => {
-        
         // console.log('api start')
         if (index !== i) return; // We're only interested in changing spring-data for the current spring
         const isGone = gone.has(index);
         const y = isGone ? (200 + window.innerHeight) * yDir : active ? my : 0; // When a card is gone it flys out left or right, otherwise goes back to zero
         const rot = my / 100 + (isGone ? yDir * 10 * vx : 0); // How much the card tilts, flicking it harder makes it rotate faster
-        // const rot = 1
         const scale = active ? 1.1 : 1; // Active cards lift up a bit
         // console.log('rot', rot)
-      
-  
+
         return {
           y,
           // x,
@@ -103,23 +100,15 @@ function Deck() {
         const remove = cards.splice(index, 1);
         console.log("cards after", cards.length);
       }, "1200");
-        
 
-console.log("cards below", cards.length);
-    //  // cards.(cards[index], 1 );
-      //REDEAL
-      // if (!active && gone.size === cards.length)
-      //   setTimeout(() => {
-      //     gone.clear();
-      //     api.start((i) => to(i));
-      //   }, 600);
+      // REDEAL
+      if (!active && gone.size === cards.length)
+        setTimeout(() => {
+          gone.clear();
+          api.start((i) => to(i));
+        }, 600);
     }
   );
-
-  
-  // Now we're just mapping the animated values to our view, that's it. Btw, this component only renders once. :-)
- 
-
   return (
     <>
       {props.map(({ x, y, rot, scale }, i) => {
@@ -149,17 +138,14 @@ console.log("cards below", cards.length);
       })}
     </>
   );
-  
 }
 
-
-// export {dislikedAD}
-
-export default function PlayingCards() {
+export default function PlayingCards(cards) {
+  const noMoreCards = cards.length > 0;
+  console.log(noMoreCards, "noMoreCards");
   return (
     <div className={`flex fill center ${styles.container}`}>
       <Deck />
     </div>
   );
 }
-
