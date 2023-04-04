@@ -14,7 +14,7 @@
   --c-skog-light: #9eb45a;
   --c-vik-dark: #455b81;
   --c-vik-light: #657b9f;
-
+  
   --background-color: linear-gradient(180deg, rgba(89, 194, 233, 0.8) 0%, rgba(29, 183, 255, 0.8) 33.65%, rgba(94, 192, 255, 0.8) 65.42%, rgba(94, 195, 255, 0.8) 100%);
 }
 
@@ -74,6 +74,7 @@ html {
   background-color: #000;
   display: flex;
   overflow: hidden;
+  height: -webkit-fill-available;
 }
 
 body {
@@ -85,6 +86,7 @@ body {
   background-size: cover;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   margin: auto;
   height: 100vh;
   /* max-height: 844px; */
@@ -100,10 +102,11 @@ body {
   -webkit-border-radius: 15px; */
   position: relative;
   overflow: hidden;
+  min-height: -webkit-fill-available;
+  
 }
 
 .main {
-
   flex-grow: 1;
   display: flex;
   flex-direction: column;
