@@ -1,5 +1,5 @@
 .footer {
-  background-color: #657b9fe1;
+  background: var(--background-color);
   padding: 20px 0;
   /* position: sticky;
   bottom: 0px; */
