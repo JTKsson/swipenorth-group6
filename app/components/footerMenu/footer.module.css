@@ -1,11 +1,11 @@
 .footer {
   background: var(--background-color);
-  padding: 20px 0;
-  /* position: sticky;
-  bottom: 0px; */
-  /* border-top: 1px solid black; */
-  position: sticky;
+  bottom: 0;
   bottom: 0px;
+  padding-bottom: env(safe-area-inset-bottom);
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
 }
 
 .footerMenu {
