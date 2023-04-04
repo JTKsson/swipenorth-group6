@@ -38,7 +38,12 @@
     touch-action: none;
     width: 45vh;
     will-change: transform;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
+
 
 /* .cardcontent {
     display: flex;

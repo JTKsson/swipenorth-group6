@@ -3,7 +3,7 @@ import logo from "../../../public/compass-logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSort, faFilter } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
-import KommunLogo from "public/logo-Kommun-black.png";
+import KommunLogo from "public/logo-Kommun-white.png";
 import DummyLogo from "public/Dummy-logo-SwN.svg";
 import FilterSlider from "public/filter-slider.svg";
 
