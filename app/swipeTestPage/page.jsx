@@ -5,8 +5,10 @@ import "./swipeCSS.css";
 import SwipeComp from "./swipeComp";
 import GestureSwipe from "./gestureSwipe";
 import AdCard from "../components/jobCard/jobCardFetch"
+import Liked from "../components/playingCards/playingCards"
 
 export default function MyComponent() {
+  console.log("liked", liked);
   return (
     <div className='swipeContainer'>
     {/* <SwipeComp /> */}

@@ -269,3 +269,8 @@
     transform: rotate(0deg);
   }
 }
+
+.animDiv {
+  border: 5px solid saddlebrown;
+  width: 100%;
+}

@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import { useSprings, animated, to as interpolate } from "@react-spring/web";
 import { useDrag } from "@use-gesture/react";
 import { annonserArr } from "@/pages/api/jobbannonser/jobbannonser";
+
 import styles from "./playingCards.module.css";
-import { dislikedAD } from "@/pages/api/dislikeAd/dislikeAd";
 
 // These two are just helpers, they curate spring data, values that are later being interpolated into css
 const to = (i) => ({
@@ -23,18 +23,20 @@ const trans = (r, s) =>
   }deg) rotateZ(${r}deg) scale(${s})`;
 
 function Deck() {
-  console.log("dislikedAD", dislikedAD);
   const [cards, setCards] = useState([]);
   const [liked, setLiked] = useState([]);
   const [noLiked, setNoLiked] = useState([]);
   const [gone] = useState(() => new Set()); // The set flags all the cards that are flicked out
+  const [hidden, setHidden] = useState(false);
+
   const [props, api] = useSprings(cards.length, (i) => ({
     ...to(i),
     from: from(i),
   })); // Create a bunch of springs using the helpers above
   // Create a gesture, we're interested in down-state, delta (current-pos - click-pos), direction and velocity
-  console.log("liked", liked.length);
-  console.log("noLiked", noLiked.length);
+  console.log("liked", liked);
+  console.log("noLiked", noLiked);
+
   useEffect(() => {
     console.log("setcards");
     setCards(() => annonserArr);
@@ -54,32 +56,24 @@ function Deck() {
         console.log("direction isNorth", yDir === 0 ? "north" : "south");
         const newLike = cards[index];
         const newNoLike = cards[index];
-        // const newNoLike = cards[index];
 
-        // const newSort = card[index];
         console.log("yDir", yDir);
         console.log("xDir", xDir);
+        setHidden(hidden); /* HÄÄÄÄÄR ÄR JAG!*/
+
         if (yDir === -1) {
           setLiked([...liked, newLike]);
           //set styles to hidden;
         } else if (yDir === 1) {
           setNoLiked([...noLiked, newNoLike]);
-          const noLikedCard = cards[index];
-          dislikedAD.push(noLikedCard);
-          console.log("index", index);
-          // console.log("dislikedAD", dislikedAD)
-          console.log("cards.length", cards.length);
-         
         } else {
           console.log("swipe error");
         }
 
         console.log("liked", liked);
         gone.add(index); // If button/finger's up and trigger velocity is reached, we flag the card ready to fly out
-      
       }
       api.start((i) => {
-        
         // console.log('api start')
         if (index !== i) return; // We're only interested in changing spring-data for the current spring
         const isGone = gone.has(index);
@@ -88,8 +82,6 @@ function Deck() {
         // const rot = 1
         const scale = active ? 1.1 : 1; // Active cards lift up a bit
         // console.log('rot', rot)
-      
-  
         return {
           y,
           // x,
@@ -99,33 +91,24 @@ function Deck() {
           config: { friction: 50, tension: active ? 800 : isGone ? 200 : 500 },
         };
       });
-      setTimeout(() => {
-        const remove = cards.splice(index, 1);
-        console.log("cards after", cards.length);
-      }, "1200");
-        
-
-console.log("cards below", cards.length);
-    //  // cards.(cards[index], 1 );
-      //REDEAL
-      // if (!active && gone.size === cards.length)
-      //   setTimeout(() => {
-      //     gone.clear();
-      //     api.start((i) => to(i));
-      //   }, 600);
+      if (!active && gone.size === cards.length)
+        setTimeout(() => {
+          gone.clear();
+          api.start((i) => to(i));
+        }, 600);
     }
   );
-
-  
   // Now we're just mapping the animated values to our view, that's it. Btw, this component only renders once. :-)
- 
-
   return (
     <>
       {props.map(({ x, y, rot, scale }, i) => {
         // console.log('x, y', x, y)
         return (
-          <animated.div className={styles.deck} key={i} style={{ x, y }}>
+          <animated.div
+            className={`styles.deck ${hidden ? "hidden" : ""}`}
+            key={i}
+            style={{ x, y }}
+          >
             {/* This is the card itself, we're binding our gesture to it (and inject its index so we know which is which) */}
             <animated.div
               {...bind(i)}
@@ -149,11 +132,7 @@ console.log("cards below", cards.length);
       })}
     </>
   );
-  
 }
-
-
-// export {dislikedAD}
 
 export default function PlayingCards() {
   return (
@@ -162,4 +141,3 @@ export default function PlayingCards() {
     </div>
   );
 }
-
