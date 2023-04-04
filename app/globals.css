@@ -17,6 +17,8 @@
 
   --cbtn-filter-prim: #fff;
   --cbtn-filter-sec: #0086A7;
+
+  --background-color: linear-gradient(180deg, rgba(89, 194, 233, 0.8) 0%, rgba(29, 183, 255, 0.8) 33.65%, rgba(94, 192, 255, 0.8) 65.42%, rgba(94, 195, 255, 0.8) 100%);
 }
 
 p {
@@ -181,55 +183,6 @@ header>* {
   display: flex;
   flex-direction: column;
 } */
-
-/***************** footer ************/
-
-.footer {
-  background-color: #657b9fe1;
-  padding: 20px 0;
-  /* position: sticky;
-  bottom: 0px; */
-  /* border-top: 1px solid black; */
-}
-
-.footer-menu {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  margin: 0 20px;
-  color: #000000;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.menu-link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.menu-fa {
-  color: #ffffff;
-  fill: #000000;
-  font-size: 32px;
-  align-items: center;
-  margin-bottom: 5px;
-}
-
-.menu-fa:hover {
-  opacity: 70%;
-}
-
-.active .menu-fa {
-  background-color: #000000;
-  border-radius: 50%;
-  font-weight: 900;
-  color: #ffffff;
-}
-
-/***************** END footer  ************/
 
 @media only screen and (max-width:389px) {
   .main {

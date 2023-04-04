@@ -2,40 +2,44 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation';
 import { CiSliderHorizontal, CiHeart, CiCompass1 } from "react-icons/ci"
+import styles from "./footer.module.css"
 
 
 const Footer = () => {
   const pathname = usePathname();
   return (
-    <footer className="footer">
+    <footer className={styles.footer}>
         <nav>
-          <ul className="footer-menu">
-            <li className='menu-item'>
+          <ul className={styles.footerMenu}>
+            <li className={styles.menuItem}>
               <Link 
                 href="/" 
-                className={'menu-link' + (pathname === '/' ? ' active' : '')}
+                className={`${styles.menuLink} ${(pathname === '/' ? styles.active : '')}`}
+
+                
               >
-                 <div className='menu-fa' >
+                 <div className={styles.menuFa} >
                 <CiCompass1/>
                 </div>
               </Link>
             </li>
-            <li className='menu-item'>
+            <li className={styles.menuItem}>
             <Link 
                 href="../savedJobs" 
-                className={'menu-link' + (pathname === '/savedJobs' ? ' active' : '')}
+                className={`${styles.menuLink} ${(pathname === '/savedJobs' ? styles.active : '')}`}
+
               >
-               <div className='menu-fa' >
+               <div className={styles.menuFa} >
                 <CiHeart/>
                 </div>
               </Link>
             </li>
-            <li className='menu-item'>
+            <li className={styles.menuItem}>
             <Link 
-                href="../profilePage" 
-                className={'menu-link' + (pathname === '/profilePage' ? ' active' : '')}
+                href="../filterPage" 
+                className={`${styles.menuLink} ${(pathname === '/filterPage' ? styles.active : '')}`}
               >
-                <div className='menu-fa' >
+                <div className={styles.menuFa} >
                 <CiSliderHorizontal/>
                 </div>
               
