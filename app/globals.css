@@ -23,7 +23,9 @@ p {
   font-weight: 400;
   color: #fff;
 }
-
+h1, h2, h3, h4 {
+  color: #fff;
+}
 h3 {
   font-size: 1rem;
   font-weight: 700;
@@ -208,4 +210,27 @@ header>* {
   html {
     color-scheme: dark;
   }
+} */
+
+input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: #fff;
+  /* Not removed via appearance */
+  margin: 0;
+}
+
+/* input[type="checkbox"] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
 } */

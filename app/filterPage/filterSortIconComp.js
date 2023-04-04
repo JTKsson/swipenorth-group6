@@ -30,9 +30,9 @@ const CheckboxList = ({ options, onFilter }) => {
 
   return (
     <>
-    <div className={styles.btn}>
+    <div >
       {options.map((option, index) => (
-        <div key={index}>
+        <div className={styles.btn} key={index}>
           <input
             type="checkbox"
             id={option}

@@ -17,7 +17,7 @@ const MyPage = () => {
     <>
     <section className={`filterContainer ${styles.filterContent}`} >
     <div>
-      <h2 className={styles.title}>Branch</h2>
+      <h3 className={styles.title}>Branch</h3>
       <CheckboxList className={styles.btn} options={options} onFilter={handleFilter} />
     </div>
     <div>
@@ -32,7 +32,7 @@ const MyPage = () => {
       <h2 className={styles.title}>Möjlighet att jobba på distans</h2>
       <CheckboxList options={remote} onFilter={handleFilter} />
     </div>
-    <button className={styles.btn} onClick={handleFilter}>Filtrera</button>
+    <button className={`${styles.btn} ${styles.filterBtn}`} onClick={handleFilter}>Filtrera</button>
     </section>
     </>
   )
