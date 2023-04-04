@@ -37,8 +37,8 @@
 }
 
 .active .menuFa{
-  background-color: #000000;
-  border-radius: 50%;
+  background-color: #ffffff;
+  border-radius: 10px;
   font-weight: 900;
-  color: #ffffff;
+  color: #000000;
 }
