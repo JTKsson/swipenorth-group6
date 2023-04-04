@@ -36,8 +36,8 @@ const Footer = () => {
             </li>
             <li className={styles.menuItem}>
             <Link 
-                href="../profilePage" 
-                className={`${styles.menuLink} ${(pathname === '/profilePage' ? styles.active : '')}`}
+                href="../filterPage" 
+                className={`${styles.menuLink} ${(pathname === '/filterPage' ? styles.active : '')}`}
               >
                 <div className={styles.menuFa} >
                 <CiSliderHorizontal/>

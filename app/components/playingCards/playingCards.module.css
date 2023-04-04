@@ -22,12 +22,13 @@
 
 .deck>div {
     backdrop-filter: blur(3px);
-    background-color: #5dd4ff96;
+    background-color: #5dd4ffc3;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: auto 85%;
     border-radius: 10px;
     box-shadow: 0 12.5px 100px -10px rgba(50, 50, 73, 0.4), 0 10px 10px -10px rgba(50, 50, 73, 0.3);
+    color: #ffffff;
     height: 85vh;
     max-height: 570px;
     max-width: 300px;
