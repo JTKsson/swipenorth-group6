@@ -8,7 +8,8 @@
 
 // export default filterSortIconComp
 'use client'
-import { useState } from 'react'
+import { useState } from 'react';
+import styles from "./filter.module.css";
 
 const CheckboxList = ({ options, onFilter }) => {
   const [checkedOptions, setCheckedOptions] = useState([])
@@ -29,7 +30,7 @@ const CheckboxList = ({ options, onFilter }) => {
 
   return (
     <>
-    <div>
+    <div className={styles.btn}>
       {options.map((option, index) => (
         <div key={index}>
           <input

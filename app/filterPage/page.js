@@ -1,7 +1,7 @@
 'use client'
 
-import CheckboxList from '../components/filterSortIconComp'
-import styles from "./filter.module.css"
+import CheckboxList from './filterSortIconComp';
+import styles from "./filter.module.css";
 
 
 const options = ['IT', 'Sjukvård', 'Skola', 'Transport']
@@ -15,10 +15,10 @@ const MyPage = () => {
 
   return (
     <>
-    <section className={styles.filterContent}>
+    <section className={`filterContainer ${styles.filterContent}`} >
     <div>
       <h2 className={styles.title}>Branch</h2>
-      <CheckboxList options={options} onFilter={handleFilter} />
+      <CheckboxList className={styles.btn} options={options} onFilter={handleFilter} />
     </div>
     <div>
       <h2 className={styles.title}>Yrke</h2>
