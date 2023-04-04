@@ -3,11 +3,7 @@
 import { Inter } from "next/font/google";
 import CheckboxList from '../components/filterSortIconComp'
 import styles from "./filter.module.css"
-import {
-  BouncingBallsDivComponent,
-  BouncingBallsCanvasComponent,
-} from "react-bouncing-balls";
-import RainbowRose from 'public/rainbowrose.jpg'
+
 
 const options = ['IT', 'Sjukvård', 'Skola', 'Transport']
 const salary = ['25 0000 - 30 000', '31 000 - 36 000']
@@ -20,7 +16,6 @@ const MyPage = () => {
 
   return (
     <>
-     <BouncingBallsDivComponent src={RainbowRose} cellSize="10"/>
     <section className={styles.filterContent}>
     <div>
       <h2 className={styles.title}>Branch</h2>
