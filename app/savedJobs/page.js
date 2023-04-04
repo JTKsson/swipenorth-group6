@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react"; //React hooks för att uppd
 import { Inter } from "next/font/google";
 import { annonserArr } from "../../pages/api/jobbannonser/jobbannonser"; //Importerad array från en annan fil
 import styles from "./page.module.css"; //Modul css
+import { dislikedAD } from "@/pages/api/dislikeAd/dislikeAd";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -58,7 +59,7 @@ export default function SavedJobsPage() {
   return (
     // allt detta för att hämta rätt data från api:n
     <div className={styles.container}>
-      {annonserArr.map((job) => (
+      {dislikedAD.map((job) => (
         <div
           className={styles.box}
           key={job.id}
