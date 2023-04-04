@@ -10,7 +10,7 @@ const Tutorial = () => {
   useEffect(() => {
     const storedIsHidden = localStorage.getItem("isHidden");
     // localStorage.getItem("isHidden");
-    console.log(storedIsHidden)
+    // console.log(storedIsHidden)
     
     // if (storedIsHidden === "false") {
       setIsHidden(storedIsHidden || false);
