@@ -1,6 +1,5 @@
 'use client'
 
-import { Inter } from "next/font/google";
 import CheckboxList from '../components/filterSortIconComp'
 import styles from "./filter.module.css"
 

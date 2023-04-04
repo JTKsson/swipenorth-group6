@@ -1,7 +1,5 @@
 'use client'
 import { Inter } from "next/font/google";
-import Image from "next/image";
-import JobCard from "./components/jobCard/jobCard";
 import PlayingCards from "./components/playingCards/playingCards";
 import Tutorial from "./components/tutorial/tutorial";
 
