@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react'
+"use client"
+
+import React, { useState, useEffect } from 'react';
 
 export default function UserWindow() {
   const [screenSize, getDimension] = useState({
