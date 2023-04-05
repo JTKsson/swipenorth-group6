@@ -3,6 +3,7 @@ import './globals.css'
 import Footer from './components/footerMenu/footerMenu'
 import Header from './components/header/header'
 import styles from 'app/page.module.css'
+import UserWindow from './components/UserWindow';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -17,6 +18,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+    <>
+    <UserWindow />
     <html lang="en" className={inter.className}>
       <body >
         <Header />
@@ -27,5 +30,6 @@ export default function RootLayout({ children }) {
         
         </body>
     </html>
+    </>
   )
 }
