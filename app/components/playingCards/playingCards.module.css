@@ -8,7 +8,7 @@
     /* background: var(--background-color); */
 
     align-items: center;
-    bottom: 0;
+    /* bottom: 0; */
     box-sizing: border-box;
     display: flex;
     height: 200px;
@@ -17,7 +17,7 @@
     margin: auto;
     position: absolute;
     right: 0;
-    top: 0px;
+    top: 250px;
     width: 300px;
     will-change: transform;
 }

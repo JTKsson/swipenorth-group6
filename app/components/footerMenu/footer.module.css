@@ -4,7 +4,7 @@
   bottom: 0px;
   padding-bottom: env(safe-area-inset-bottom);
   padding: 4px 0;
-  /* position: fixed; */
+  position: fixed;
   width: 100%;
 }
 
