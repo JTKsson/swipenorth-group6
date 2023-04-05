@@ -3,8 +3,8 @@
   bottom: 0;
   bottom: 0px;
   padding-bottom: env(safe-area-inset-bottom);
-  padding: 20px 0;
-  position: fixed;
+  padding: 4px 0;
+  /* position: fixed; */
   width: 100%;
 }
 
@@ -29,7 +29,7 @@
 .menuFa {
   color: #ffffff;
   fill: #000000;
-  font-size: 32px;
+  font-size: 54px;
   align-items: center;
   margin-bottom: 5px;
 }
