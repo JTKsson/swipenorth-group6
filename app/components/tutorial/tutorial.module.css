@@ -1,8 +1,57 @@
+.arrow {
+  background-color: transparent;
+  font-size: 16px;
+  height: fit-content;
+  margin: 8px;
+  padding: 8px;
+  width: 50%;
+}
 
+.arrow>span {
+  font-size: 24px;
+}
+
+.button {
+  align-items: center;
+  background-color: transparent;
+  border-color: #ffffff;
+  border-radius: 200px;
+  border-width: 1px; 
+  bottom: 8px;
+  color: #FFFFFF;
+  display: inline-flex;
+  font-size: 0.813rem;
+  font-weight: 400;
+  justify-content: center;
+  left: 8px;
+  line-height: 1;
+  margin-bottom: 0.625em;
+  padding: 0.5em 1.25em;
+  position: absolute;
+  text-align: center;
+  transition: background-color, border-color, color .2s ease;
+  }
+
+.down {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.leftRight {
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.point {
+  font-size: 100px;
+}
 
 .tutorialCard {
   align-items: center;
-  background-color: #5dd4ffde;
+  background: var(--background-color);
   border-radius: 8px;
   bottom: 0;
   box-sizing: border-box;
@@ -19,51 +68,8 @@
   width: 90%;
 }
 
-.arrow {
-  background-color: transparent;
-  font-size: 26px;
-  height: fit-content;
-  margin: 8px;
-  padding: 8px;
-  width: 50%;
-}
-
 .up {
   align-items: center;
   display: flex;
   flex-direction: column;
-}
-
-.down {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-}
-
-.leftRight {
-  align-self: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.button {
-align-items: center;
-background-color: transparent;
-border-color: var(--cbtn-filter);
-border-radius: 200px;
-border-width: 1px; 
-bottom: 8px;
-color: var(--cbtn-filter);
-display: inline-flex;
-font-size: 0.813rem;
-font-weight: 400;
-justify-content: center;
-left: 8px;
-line-height: 1;
-margin-bottom: 0.625em;
-padding: 0.5em 1.25em;
-position: absolute;
-text-align: center;
-transition: background-color, border-color, color .2s ease;
 }

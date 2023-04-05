@@ -1,4 +1,15 @@
 @media only screen and (max-width: 500px) {
+  .box {
+    background: var(--background-color);
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 10px #0003;
+    border-radius: 20px;
+    color: #ffffff;
+  }
 
   .container {
     display: inline-block;
@@ -7,25 +18,13 @@
     margin-left: 9px;
   }
 
-  .box {
-    background-color: #5dd4ffde;
-    padding: 20px;
-    margin-bottom: 20px;
-    width: 100%;
-    max-width: 500px;
-    box-sizing: border-box;
-    box-shadow: 2px 2px 10px #0003;
-    border-radius: 20px;
-    color: #0b0000;
-  }
-
   .popup {
     position: fixed;
     top: 126px;
     left: 15px;
     width: 91%;
     height: 65%;
-    background-color: #5dd4ffde;
+    background: var(--background-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,10 +56,10 @@
 
   .popupButtons button {
     background-color: transparent;
-    border-color: var(--cbtn-filter);
+    border-color: #ffffff;
     border-radius: 200px;
     border-width: 1px;
-    color: var(--cbtn-filter);
+    color: #ffffff;
     font-size: 0.813rem;
     font-weight: 400;
     line-height: 1;

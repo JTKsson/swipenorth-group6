@@ -6,10 +6,6 @@
     padding-top: 20px;
     background-color: pink;
   }
-
-  .text {
-    background-color: aqua;
-  }
   
   .logo {
     display: flex;
@@ -46,4 +42,8 @@
   .sort button svg,
   .filter button svg {
     margin-right: 5px;
+  }
+
+  .text {
+    background-color: aqua;
   }
