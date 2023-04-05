@@ -53,18 +53,18 @@
   align-items: center;
   background: var(--background-color);
   border-radius: 8px;
-  bottom: 0;
+  /* bottom: 0; */
   box-sizing: border-box;
   display: flex;
   flex-direction:column;
-  height: 80%;
+  height: 70%;
   justify-content: space-evenly;
   left: 0;
   margin: auto;
   position: absolute;
   right: 0;
   text-align: center;
-  top: 0;
+  top: 70px;
   width: 90%;
 }
 
